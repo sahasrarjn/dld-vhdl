@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, /home/sahasra/Documents/dld/lab1/orGate/orGate.vhd
+source_file = 1, /home/sahasra/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/sahasra/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/sahasra/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/sahasra/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/sahasra/Documents/dld/lab1/orGate/db/orGate.cbx.xml
+design_name = orGate
+instance = comp, \C~output , C~output, orGate, 1
+instance = comp, \A~input , A~input, orGate, 1
+instance = comp, \B~input , B~input, orGate, 1
+instance = comp, \C~0 , C~0, orGate, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, orGate, 1
