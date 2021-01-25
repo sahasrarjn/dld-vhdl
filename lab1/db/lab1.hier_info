@@ -1,0 +1,28 @@
+|lab1
+inA => andGate:gateAnd.a
+inA => orGate:gateOr.a
+inA => notGate:gateNot.a
+inB => andGate:gateAnd.b
+inB => orGate:gateOr.b
+oAnd << andGate:gateAnd.c
+oOr << orGate:gateOr.c
+oNot << notGate:gateNot.c
+
+
+|lab1|andGate:gateAnd
+A => C.IN0
+B => C.IN1
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|orGate:gateOr
+A => C.IN0
+B => C.IN1
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab1|notGate:gateNot
+A => C.DATAIN
+C <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+

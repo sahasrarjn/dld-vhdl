@@ -1,18 +1,18 @@
-entity main is
-end main;
+entity Testbench is
+end Testbench
 
-architecture tb of main is
+architecture tb of Testbench
 	signal x, y : bit; --inputs
 	signal andGate, orGate, notGate : bit; --outputs
 	
-	component main is
+	component lab1 is
 		port(A, B: in bit;
 			C, D, E: out bit);
 	end component;
 	
 begin
 	-- Connecting test bench signals with HalfAdder.vhd
-	dut_instance: main
+	dut_instance: lab1
 	port map (A=>x, B=>y, C=>andGate, D=>orGate, E=>notGate);
 	process --inputs
 	begin
@@ -20,7 +20,7 @@ begin
 	y <= '0';
 	wait for 5 ns;
 	
-	x <= '0';
+--	x <= '0';
 	y <= '1';
 	wait for 5 ns;
 
@@ -33,4 +33,4 @@ begin
 	wait for 5 ns;
 
 	end process;
-	end tb;
+end tb;

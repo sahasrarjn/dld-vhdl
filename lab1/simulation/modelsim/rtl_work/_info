@@ -1,0 +1,159 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/sahasra/Documents/dld/lab1/simulation/modelsim
+Eandgate
+Z1 w1611469393
+!i122 3
+R0
+Z2 8/home/sahasra/Documents/dld/lab1/andGate.vhd
+Z3 F/home/sahasra/Documents/dld/lab1/andGate.vhd
+l0
+L1 1
+V:MjOU430X8nbSg:i1OOZK2
+!s100 N7Rci>Uz9<Ton<RoldbGM2
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1611533260
+!i10b 1
+Z6 !s108 1611533259.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/lab1/andGate.vhd|
+!s107 /home/sahasra/Documents/dld/lab1/andGate.vhd|
+!i113 1
+Z8 o-93 -work work
+Z9 tExplicit 1 CvgOpt 0
+Aandstruct
+DEx4 work 7 andgate 0 22 :MjOU430X8nbSg:i1OOZK2
+!i122 3
+l7
+L6 4
+VQS<iTZ2`N4R>Hn3bDnJ<l1
+!s100 UogdiFV;ahG]6lRS8FZ0G2
+R4
+31
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 /home/sahasra/Documents/dld/lab1/andGate.vhd|
+!i113 1
+R8
+R9
+Elab1
+Z11 w1611531502
+!i122 2
+R0
+Z12 8/home/sahasra/Documents/dld/lab1/lab1.vhd
+Z13 F/home/sahasra/Documents/dld/lab1/lab1.vhd
+l0
+L1 1
+V88Pj_XPR4lbl41Xon_Mll1
+!s100 ET=E^lA>=M9F>B7iQRmTA0
+R4
+31
+Z14 !s110 1611533259
+!i10b 1
+R6
+Z15 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/lab1/lab1.vhd|
+Z16 !s107 /home/sahasra/Documents/dld/lab1/lab1.vhd|
+!i113 1
+R8
+R9
+Alab
+DEx4 work 4 lab1 0 22 88Pj_XPR4lbl41Xon_Mll1
+!i122 2
+l22
+L6 27
+V0><4GO;iZ151H5Pk5Nnje3
+!s100 JHhR8T7YP7^Oh4`hd31NT1
+R4
+31
+R14
+!i10b 1
+R6
+R15
+R16
+!i113 1
+R8
+R9
+Enotgate
+Z17 w1611469037
+!i122 1
+R0
+Z18 8/home/sahasra/Documents/dld/lab1/notGate.vhd
+Z19 F/home/sahasra/Documents/dld/lab1/notGate.vhd
+l0
+L1 1
+VWAI[0U4<8fB^U<g_^iZ:]3
+!s100 NoNEP=c>PHN[eKmCE0BJl0
+R4
+31
+R14
+!i10b 1
+R6
+Z20 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/lab1/notGate.vhd|
+Z21 !s107 /home/sahasra/Documents/dld/lab1/notGate.vhd|
+!i113 1
+R8
+R9
+Anotstruct
+DEx4 work 7 notgate 0 22 WAI[0U4<8fB^U<g_^iZ:]3
+!i122 1
+l7
+L6 4
+VM_kdeMCH=YOTeecoD16@z3
+!s100 lmVQm2lMUA]?ookR0O:zB0
+R4
+31
+R14
+!i10b 1
+R6
+R20
+R21
+!i113 1
+R8
+R9
+Eorgate
+Z22 w1611469049
+!i122 0
+R0
+Z23 8/home/sahasra/Documents/dld/lab1/orGate.vhd
+Z24 F/home/sahasra/Documents/dld/lab1/orGate.vhd
+l0
+L1 1
+VPVo;6DJ[TLAeUl?i9V7:]2
+!s100 W_O_fQ>mAhZBJ6Kd:a09W3
+R4
+31
+R14
+!i10b 1
+R6
+Z25 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/lab1/orGate.vhd|
+Z26 !s107 /home/sahasra/Documents/dld/lab1/orGate.vhd|
+!i113 1
+R8
+R9
+Aorstruct
+DEx4 work 6 orgate 0 22 PVo;6DJ[TLAeUl?i9V7:]2
+!i122 0
+l7
+L6 4
+VT2oUXgfl9TW2>4Cf2zlfo0
+!s100 KiYJRY1TkocmeEJaRnbaW0
+R4
+31
+R14
+!i10b 1
+R6
+R25
+R26
+!i113 1
+R8
+R9
