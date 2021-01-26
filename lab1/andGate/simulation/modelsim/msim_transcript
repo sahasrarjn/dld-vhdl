@@ -11,27 +11,27 @@
 # 
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/andGate/andGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:25:33 on Jan 25,2021
+# Start time: 17:28:28 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/andGate/andGate.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity andGate
 # -- Compiling architecture struct of andGate
-# End time: 22:25:33 on Jan 25,2021, Elapsed time: 0:00:00
+# End time: 17:28:28 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/andGate/Testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:25:33 on Jan 25,2021
+# Start time: 17:28:28 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/andGate/Testbench.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity Testbench
 # -- Compiling architecture tb of Testbench
-# End time: 22:25:33 on Jan 25,2021, Elapsed time: 0:00:00
+# End time: 17:28:28 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 22:25:34 on Jan 25,2021
+# Start time: 17:28:28 on Jan 26,2021
 # Loading std.standard
 # Loading work.testbench(tb)
 # Loading work.andgate(struct)
@@ -42,7 +42,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# 
-# stdin: <EOF>
-# End time: 22:27:06 on Jan 25,2021, Elapsed time: 0:01:32
+# Break key hit
+# Simulation stop requested.
+# End time: 17:28:39 on Jan 26,2021, Elapsed time: 0:00:11
 # Errors: 0, Warnings: 0
