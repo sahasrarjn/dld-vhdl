@@ -11,59 +11,56 @@
 # 
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/andGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:42:31 on Jan 26,2021
+# Start time: 19:24:10 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/andGate.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity andGate
 # -- Compiling architecture struct of andGate
-# End time: 17:42:31 on Jan 26,2021, Elapsed time: 0:00:00
+# End time: 19:24:10 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/notGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:42:31 on Jan 26,2021
+# Start time: 19:24:10 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/notGate.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity notGate
 # -- Compiling architecture struct of notGate
-# End time: 17:42:31 on Jan 26,2021, Elapsed time: 0:00:00
+# End time: 19:24:10 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/orGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:42:31 on Jan 26,2021
+# Start time: 19:24:10 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/orGate.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity orGate
 # -- Compiling architecture struct of orGate
-# End time: 17:42:31 on Jan 26,2021, Elapsed time: 0:00:00
+# End time: 19:24:10 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/main.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:42:31 on Jan 26,2021
+# Start time: 19:24:10 on Jan 26,2021
 # vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/main.vhd 
 # -- Loading package STANDARD
 # -- Compiling entity main
 # -- Compiling architecture ar of main
-# End time: 17:42:31 on Jan 26,2021, Elapsed time: 0:00:00
+# End time: 19:24:10 on Jan 26,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/Testbench.vhd}
+# vcom -93 -work work {/home/sahasra/Documents/dld/lab1/main/testbench_not.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:42:31 on Jan 26,2021
-# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/Testbench.vhd 
+# Start time: 19:24:10 on Jan 26,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/lab1/main/testbench_not.vhd 
 # -- Loading package STANDARD
-# -- Compiling entity Testbench
-# -- Compiling architecture tb of Testbench
-# End time: 17:42:31 on Jan 26,2021, Elapsed time: 0:00:00
+# -- Compiling entity testbench_not
+# -- Compiling architecture tb of testbench_not
+# End time: 19:24:11 on Jan 26,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 17:42:31 on Jan 26,2021
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_not
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_not 
+# Start time: 19:24:11 on Jan 26,2021
 # Loading std.standard
-# Loading work.testbench(tb)
-# Loading work.main(ar)
-# Loading work.andgate(struct)
-# Loading work.orgate(struct)
+# Loading work.testbench_not(tb)
 # Loading work.notgate(struct)
 # 
 # add wave *
@@ -74,5 +71,5 @@
 # run -all
 # 
 # stdin: <EOF>
-# End time: 17:43:30 on Jan 26,2021, Elapsed time: 0:00:59
+# End time: 19:24:56 on Jan 26,2021, Elapsed time: 0:00:45
 # Errors: 0, Warnings: 0

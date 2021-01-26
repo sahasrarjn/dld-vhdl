@@ -1,7 +1,7 @@
-entity Testbench is
-end Testbench;
+entity testbench_not is
+end testbench_not;
 
-architecture tb of Testbench is
+architecture tb of testbench_not is
 	signal x:bit; -- Inputs (simulation)
 	signal outBit:bit; -- Outputs (simulation)
 
@@ -11,7 +11,7 @@ architecture tb of Testbench is
 	end component;
 	
 	begin
-		-- Connecting testbench signals with the andgate.vhd
+		-- Connecting testbench_not signals with the andgate.vhd
 		dut_instance : notGate
 			port map(x, outBit);
 

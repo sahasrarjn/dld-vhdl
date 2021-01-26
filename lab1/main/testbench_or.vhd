@@ -1,7 +1,7 @@
-entity Testbench is
-end Testbench;
+entity testbench_or is
+end testbench_or;
 
-architecture tb of Testbench is
+architecture tb of testbench_or is
 	signal x,y:bit; -- Inputs (simulation)
 	signal outBit:bit; -- Outputs (simulation)
 
@@ -11,7 +11,7 @@ architecture tb of Testbench is
 	end component;
 	
 	begin
-		-- Connecting testbench signals with the andgate.vhd
+		-- Connecting testbench_or signals with the andgate.vhd
 		dut_instance : orGate
 			port map(x, y, outBit);
 

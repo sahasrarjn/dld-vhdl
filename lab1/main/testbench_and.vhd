@@ -1,7 +1,7 @@
-entity Testbench is
-end Testbench;
+entity testbench_and is
+end testbench_and;
 
-architecture tb of Testbench is
+architecture tb of testbench_and is
 	signal x,y:bit; -- Inputs (simulation)
 	signal outBit:bit; -- Outputs (simulation)
 
