@@ -3,17 +3,17 @@ end Testbench;
 
 architecture tb of Testbench is
 	signal x,y:bit; -- Inputs (simulation)
-	signal and_out,or_out,not_out:bit; -- Outputs (simulation)
+	signal outBit:bit; -- Outputs (simulation)
 
-	component main is
+	component orGate is
 	port(A,B : in bit;
-		oAnd,oOr,oNot : out bit);
+		C : out bit);
 	end component;
 	
 	begin
 		-- Connecting testbench signals with the andgate.vhd
-		dut_instance : main
-			port map(x, y, and_out, or_out, not_out);
+		dut_instance : orGate
+			port map(x, y, outBit);
 
 		process -- inputs
 		begin
