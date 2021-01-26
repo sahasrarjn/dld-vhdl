@@ -1,0 +1,196 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/sibasis/Desktop/Quartus/Lab1/simulation/modelsim
+Eand_gate
+Z1 w1611384720
+!i122 0
+R0
+Z2 8/home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd
+Z3 F/home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd
+l0
+L1 1
+VTU[B=JaBn9cLh3d385RdC0
+!s100 zlchbAaRGP9Dh7S<`E_h=2
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1611387665
+!i10b 1
+Z6 !s108 1611387665.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|/home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd|
+Z8 !s107 /home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Aandstruct
+DEx4 work 8 and_gate 0 22 TU[B=JaBn9cLh3d385RdC0
+!i122 0
+l7
+L6 4
+V<3[8A=kg9mDf6?CPfPGS90
+!s100 8WZiamYc0m`[9e8NVE4`E2
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Elab1
+Z11 w1611386654
+!i122 3
+R0
+Z12 8/home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd
+Z13 F/home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd
+l0
+L1 1
+VoRho:TM:YBKj_2n14BQde1
+!s100 Ak=57K3ORBNJ0eZ`lW0jh2
+R4
+31
+Z14 !s110 1611387666
+!i10b 1
+Z15 !s108 1611387666.000000
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd|
+Z17 !s107 /home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd|
+!i113 1
+R9
+R10
+Alab
+DEx4 work 4 lab1 0 22 oRho:TM:YBKj_2n14BQde1
+!i122 3
+l23
+L6 30
+Vn6ghL;jUzLGdE>c;16CiB2
+!s100 4SZ^kd^D9Xk=nE^7JPlO?0
+R4
+31
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
+Enot_gate
+Z18 w1611385289
+!i122 2
+R0
+Z19 8/home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd
+Z20 F/home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd
+l0
+L1 1
+V5l?3?M3V=[>^m?d93ef3b2
+!s100 zf0>mm^R^Akh6903JNh`E1
+R4
+31
+R5
+!i10b 1
+R6
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd|
+Z22 !s107 /home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd|
+!i113 1
+R9
+R10
+Anotstruct
+DEx4 work 8 not_gate 0 22 5l?3?M3V=[>^m?d93ef3b2
+!i122 2
+l7
+L6 4
+V72GUb0hF=lo_kogNTFX^g2
+!s100 F2WLN4IeCXCelY_i:eJ=E1
+R4
+31
+R5
+!i10b 1
+R6
+R21
+R22
+!i113 1
+R9
+R10
+Eor_gate
+Z23 w1611384724
+!i122 1
+R0
+Z24 8/home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd
+Z25 F/home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd
+l0
+L1 1
+VZfo`Mez78h8ifl1Ef7Qc=3
+!s100 m[A_0TUahVcAOhk6EN;W10
+R4
+31
+R5
+!i10b 1
+R6
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd|
+Z27 !s107 /home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd|
+!i113 1
+R9
+R10
+Aorstruct
+DEx4 work 7 or_gate 0 22 Zfo`Mez78h8ifl1Ef7Qc=3
+!i122 1
+l7
+L6 4
+V<QnUfLX_AE=XLdFI1icYM2
+!s100 l@PzX:h6nic@CNn>Q;@`33
+R4
+31
+R5
+!i10b 1
+R6
+R26
+R27
+!i113 1
+R9
+R10
+Etestbench
+Z28 w1611387657
+!i122 4
+R0
+Z29 8/home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd
+Z30 F/home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd
+l0
+L1 1
+VoImoVokT=EL:YmoRl<zdR2
+!s100 9E^^RMNoOGTG1GT[WPz2z1
+R4
+31
+R14
+!i10b 1
+R15
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd|
+!s107 /home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd|
+!i113 1
+R9
+R10
+Atb
+DEx4 work 9 testbench 0 22 oImoVokT=EL:YmoRl<zdR2
+!i122 4
+l13
+L4 29
+VgUz:86E]IGen@<AO:mIH92
+!s100 7^RUhDB8`JXHIFMFnNHf<1
+R4
+31
+R14
+!i10b 1
+R15
+R31
+Z32 !s107 /home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd|
+!i113 1
+R9
+R10

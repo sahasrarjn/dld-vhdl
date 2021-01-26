@@ -1,0 +1,78 @@
+# do Lab1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/sibasis/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:11:05 on Jan 23,2021
+# vcom -reportprogress 300 -93 -work work /home/sibasis/Desktop/Quartus/Lab1/and_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity and_gate
+# -- Compiling architecture andStruct of and_gate
+# End time: 13:11:05 on Jan 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:11:05 on Jan 23,2021
+# vcom -reportprogress 300 -93 -work work /home/sibasis/Desktop/Quartus/Lab1/or_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity or_gate
+# -- Compiling architecture orStruct of or_gate
+# End time: 13:11:05 on Jan 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:11:05 on Jan 23,2021
+# vcom -reportprogress 300 -93 -work work /home/sibasis/Desktop/Quartus/Lab1/not_gate.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity not_gate
+# -- Compiling architecture notStruct of not_gate
+# End time: 13:11:05 on Jan 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:11:06 on Jan 23,2021
+# vcom -reportprogress 300 -93 -work work /home/sibasis/Desktop/Quartus/Lab1/Lab1.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity Lab1
+# -- Compiling architecture lab of Lab1
+# End time: 13:11:06 on Jan 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:11:06 on Jan 23,2021
+# vcom -reportprogress 300 -93 -work work /home/sibasis/Desktop/Quartus/Lab1/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity Testbench
+# -- Compiling architecture tb of Testbench
+# End time: 13:11:06 on Jan 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 13:11:06 on Jan 23,2021
+# Loading std.standard
+# Loading work.testbench(tb)
+# Loading work.lab1(lab)
+# Loading work.and_gate(andstruct)
+# Loading work.or_gate(orstruct)
+# Loading work.not_gate(notstruct)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 
+# stdin: <EOF>
+# End time: 13:11:55 on Jan 23,2021, Elapsed time: 0:00:49
+# Errors: 0, Warnings: 0

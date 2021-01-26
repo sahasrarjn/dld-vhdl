@@ -1,0 +1,35 @@
+entity Testbench is 
+end Testbench;
+
+architecture tb of Testbench is
+	signal X,Y; --input
+	signal p,q,r; --output
+	
+	component Lab1 is
+		port(inp_a,inp_b : in bit;
+		op_and, op_or, op_not: out bit);
+	end component;
+
+begin
+	dut_instance : Lab1
+		port map (X,Y,p,q,r);
+	
+	process
+	begin
+		X <= 0;
+		Y <= 0;
+		wait for 5 ns;
+		X <= 0;
+		Y <= 1;
+		wait for 5 ns;
+		X <= 1;
+		Y <= 0;
+		wait for 5 ns;
+		X <= 1;
+		Y <= 1;
+		wait for 5 ns;
+	end process;
+end tb;
+		
+	
+	
