@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity EightbyThreeEncode is
-	port( i : in std_logic_vector(7 downto 0):
+	port( i : in std_logic_vector(7 downto 0);
 				en: in std_logic;
 				z: out std_logic_vector(2 downto 0));
 	end entity;
