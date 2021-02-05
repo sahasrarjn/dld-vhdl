@@ -1,0 +1,64 @@
+|EightbyThreeEncode
+i[0] => ~NO_FANOUT~
+i[1] => fourOrGate:or1.a
+i[2] => fourOrGate:or2.a
+i[3] => fourOrGate:or1.b
+i[3] => fourOrGate:or2.b
+i[4] => fourOrGate:or3.a
+i[5] => fourOrGate:or1.c
+i[5] => fourOrGate:or3.b
+i[6] => fourOrGate:or2.c
+i[6] => fourOrGate:or3.c
+i[7] => fourOrGate:or1.d
+i[7] => fourOrGate:or2.d
+i[7] => fourOrGate:or3.d
+en => and_gate:and1.b
+en => and_gate:and2.b
+en => and_gate:and3.b
+z[0] <= and_gate:and1.c
+z[1] <= and_gate:and2.c
+z[2] <= and_gate:and3.c
+
+
+|EightbyThreeEncode|fourOrGate:or1
+a => e.IN0
+b => e.IN1
+c => e.IN0
+d => e.IN1
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbyThreeEncode|fourOrGate:or2
+a => e.IN0
+b => e.IN1
+c => e.IN0
+d => e.IN1
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbyThreeEncode|fourOrGate:or3
+a => e.IN0
+b => e.IN1
+c => e.IN0
+d => e.IN1
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbyThreeEncode|and_gate:and1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbyThreeEncode|and_gate:and2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbyThreeEncode|and_gate:and3
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
