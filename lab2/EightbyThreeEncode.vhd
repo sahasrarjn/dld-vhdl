@@ -10,7 +10,7 @@ entity EightbyThreeEncode is
 -- architecture of 2x1 mux
 architecture eightbythree_behaviour  of EightbyThreeEncode is
 
---Signal d : std_logic_vector(1 downto 0); --Vector to store intermediate signals
+Signal d : std_logic_vector(2 downto 0); --Vector to store intermediate signals
 --Signal n : std_logic; --Gate to do ~sel
 
 -- declare components of basic_gates
@@ -19,24 +19,30 @@ component and_gate
 			c:out std_logic);
 end component;
 
-component or_gate
-	port(a,b : in std_logic;
-			c:out std_logic);
+component fourOrGate
+	port(a,b,c,d : in std_logic;
+			e :out std_logic);
 end component;
 
 
 begin
-notgate : not_gate
-port map(sel,n);  -- n = ~sel
+or1 : fourOrGate
+port map(i(1),i(3),i(5),i(7), d(0));
 
-andgate1 : and_gate 
-port map(i(0),n,d(0)); -- d(0) = i(0)&(~sel)
+or2 : fourOrGate
+port map(i(2),i(3),i(6),i(7), d(1));
 
-andgate2 : and_gate
-port map(i(1),sel,d(1)); -- d(1) = i(1)&sel
+or3 : fourOrGate
+port map(i(4),i(5),i(6),i(7), d(2));
 
-orgate : or_gate
-port map(d(0),d(1),z); -- z = d(0) or d(1) /// equiv to z = i(0).~sel + i(1).sel
+and1 : and_gate
+port map(d(0),en,z(0));
+
+and2 : and_gate
+port map(d(1),en,z(1));
+
+and3 : and_gate
+port map(d(2),en,z(2));
 
 end eightbythree_behaviour;
 
