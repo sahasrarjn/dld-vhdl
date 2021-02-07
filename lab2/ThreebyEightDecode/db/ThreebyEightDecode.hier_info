@@ -22,14 +22,14 @@ en => fourAndGate:and4.d
 en => fourAndGate:and5.d
 en => fourAndGate:and6.d
 en => fourAndGate:and7.d
-z[0] <= fourAndGate:and0.e
-z[1] <= fourAndGate:and1.e
-z[2] <= fourAndGate:and2.e
-z[3] <= fourAndGate:and3.e
-z[4] <= fourAndGate:and4.e
-z[5] <= fourAndGate:and5.e
-z[6] <= fourAndGate:and6.e
-z[7] <= fourAndGate:and7.e
+z[0] << fourAndGate:and0.e
+z[1] << fourAndGate:and1.e
+z[2] << fourAndGate:and2.e
+z[3] << fourAndGate:and3.e
+z[4] << fourAndGate:and4.e
+z[5] << fourAndGate:and5.e
+z[6] << fourAndGate:and6.e
+z[7] << fourAndGate:and7.e
 
 
 |ThreebyEightDecode|not_gate:not0
