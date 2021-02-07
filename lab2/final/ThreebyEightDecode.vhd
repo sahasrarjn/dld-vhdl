@@ -39,22 +39,22 @@ and0 : fourAndGate
 port map(ni(0),ni(1),ni(2),en,z(0)); -- A'B'C'
 
 and1 : fourAndGate
-port map(ni(0),ni(1),i(2),en,z(1)); -- A'B'C
+port map(i(0),ni(1),ni(2),en,z(1)); -- AB'C'
 
 and2 : fourAndGate
 port map(ni(0),i(1),ni(2),en,z(2)); -- A'BC'
 
 and3 : fourAndGate
-port map(ni(0),i(1),i(2),en,z(3)); -- A'BC
+port map(i(0),i(1),ni(2),en,z(3)); -- ABC'
 
 and4 : fourAndGate
-port map(i(0),ni(1),ni(2),en,z(4)); -- AB'C'
+port map(ni(0),ni(1),i(2),en,z(4)); -- A'B'C
 
 and5 : fourAndGate
 port map(i(0),ni(1),i(2),en,z(5)); -- AB'C
 
 and6 : fourAndGate
-port map(i(0),i(1),ni(2),en,z(6)); -- ABC'
+port map(ni(0),i(1),i(2),en,z(6)); -- A'BC
 
 and7 : fourAndGate
 port map(i(0),i(1),i(2),en,z(7)); -- ABC
