@@ -1,0 +1,75 @@
+# Reading pref.tcl
+# do EightbyThreeEncode_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/iitb/dld-vhdl/lab2/EightbyThreeEncode.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:52 on Feb 07,2021
+# vcom -reportprogress 300 -93 -work work C:/iitb/dld-vhdl/lab2/EightbyThreeEncode.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity EightbyThreeEncode
+# -- Compiling architecture eightbythree_behaviour of EightbyThreeEncode
+# End time: 16:10:52 on Feb 07,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/iitb/dld-vhdl/lab2/basic_gates.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:52 on Feb 07,2021
+# vcom -reportprogress 300 -93 -work work C:/iitb/dld-vhdl/lab2/basic_gates.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity and_gate
+# -- Compiling entity or_gate
+# -- Compiling entity not_gate
+# -- Compiling entity fourOrGate
+# -- Compiling entity fourAndGate
+# -- Compiling architecture and_behaviour of and_gate
+# -- Compiling architecture or_behaviour of or_gate
+# -- Compiling architecture not_behaviour of not_gate
+# -- Compiling architecture fourOr_behaviour of fourOrGate
+# -- Compiling architecture fourAnd_behaviour of fourAndGate
+# End time: 16:10:52 on Feb 07,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/iitb/dld-vhdl/lab2/EightbyThreeEncode/../ENCODEtest.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:10:52 on Feb 07,2021
+# vcom -reportprogress 300 -93 -work work C:/iitb/dld-vhdl/lab2/EightbyThreeEncode/../ENCODEtest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ENCODEtest
+# -- Compiling architecture behavior of ENCODEtest
+# End time: 16:10:52 on Feb 07,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  ENCODEtest
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" ENCODEtest 
+# Start time: 16:10:52 on Feb 07,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.encodetest(behavior)
+# Loading work.eightbythreeencode(eightbythree_behaviour)
+# Loading work.fourorgate(fouror_behaviour)
+# Loading work.and_gate(and_behaviour)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# image file format "bmp" is unknown
+# End time: 16:18:29 on Feb 07,2021, Elapsed time: 0:07:37
+# Errors: 0, Warnings: 0

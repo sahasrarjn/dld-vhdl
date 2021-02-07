@@ -1,0 +1,298 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/iitb/dld-vhdl/lab2/ThreebyEightDecode/simulation/modelsim
+Eand_gate
+Z1 w1612682474
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8C:/iitb/dld-vhdl/lab2/basic_gates.vhd
+Z5 FC:/iitb/dld-vhdl/lab2/basic_gates.vhd
+l0
+L8 1
+VDKVSzLlZZ6bnVK8Jc[gJQ0
+!s100 l9F:fQ@PDTfDKa6GiB]kE3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1612695806
+!i10b 1
+Z8 !s108 1612695806.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/basic_gates.vhd|
+Z10 !s107 C:/iitb/dld-vhdl/lab2/basic_gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aand_behaviour
+R2
+R3
+DEx4 work 8 and_gate 0 22 DKVSzLlZZ6bnVK8Jc[gJQ0
+!i122 2
+l53
+L52 4
+VhNASfPVMOgLS0LP^04c]]3
+!s100 IZNe8cBeTP0JnC<6THgSH2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edecodetest
+Z13 w1612692832
+R2
+R3
+!i122 3
+R0
+Z14 8C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd
+Z15 FC:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd
+l0
+L4 1
+V9o64Qdl0[2GdI:]z^ZGUd2
+!s100 E6^aN_YlCQ1FzLhN@m2Z[1
+R6
+31
+Z16 !s110 1612695807
+!i10b 1
+Z17 !s108 1612695807.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
+!s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z19 DEx4 work 10 decodetest 0 22 9o64Qdl0[2GdI:]z^ZGUd2
+!i122 3
+l26
+Z20 L7 113
+Z21 Vi[[m>D2nkHo?C<JN2Y>3;0
+Z22 !s100 nmNY9@oNPHIcj0LN;oK<M3
+R6
+31
+R16
+!i10b 1
+R17
+R18
+Z23 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
+!i113 1
+R11
+R12
+Efourandgate
+R1
+R2
+R3
+!i122 2
+R0
+R4
+R5
+l0
+L44 1
+VMDzHdb0j097Bm@UOkf:Fe2
+!s100 n:63VlKg^Xa[W4;T1dR^S2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Afourand_behaviour
+R2
+R3
+DEx4 work 11 fourandgate 0 22 MDzHdb0j097Bm@UOkf:Fe2
+!i122 2
+l77
+L76 4
+VhBLT8NhCkCf6d<FV^ZNgE1
+!s100 3?@B_CVgNm>T`kR2l:L^;1
+R6
+31
+R16
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efourorgate
+R1
+R2
+R3
+!i122 2
+R0
+R4
+R5
+l0
+L35 1
+Vm=i@f;`l=^7Knhkc6Vgi>3
+!s100 Idg7z<:QXImN82jGS=4<d1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Afouror_behaviour
+R2
+R3
+DEx4 work 10 fourorgate 0 22 m=i@f;`l=^7Knhkc6Vgi>3
+!i122 2
+l71
+L70 4
+VcX?@M=OWS@=^?8mcV@add1
+!s100 M9mDKzm?d9NK>cee?53`J1
+R6
+31
+R16
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enot_gate
+R1
+R2
+R3
+!i122 2
+R0
+R4
+R5
+l0
+L26 1
+VEN3a^33H^FYU_Pa?^2`2?0
+!s100 M=[1[E?d[Z@bzQHhogZ^61
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Anot_behaviour
+R2
+R3
+DEx4 work 8 not_gate 0 22 EN3a^33H^FYU_Pa?^2`2?0
+!i122 2
+l65
+L64 4
+VDjnm=VOd[MlTVb7<mT<W50
+!s100 Y[m[C[X4@EAhk8>V1VM3e3
+R6
+31
+R16
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_gate
+R1
+R2
+R3
+!i122 2
+R0
+R4
+R5
+l0
+L17 1
+Vo[^bDSXX3ZYi]k554Qz2b1
+!s100 i;4gCljQ3ZWM_HO4:<nH^1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aor_behaviour
+R2
+R3
+DEx4 work 7 or_gate 0 22 o[^bDSXX3ZYi]k554Qz2b1
+!i122 2
+l59
+L58 4
+VmN@;0HNF10GGBM`H1LSmH0
+!s100 YR=d5?Oc0f2^=d7B=oKNA3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ethreebyeightdecode
+Z24 w1612695479
+R2
+R3
+!i122 1
+R0
+Z25 8C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
+Z26 FC:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
+l0
+L5 1
+Vni@bh@mB2[R>c;ZeSFI]G1
+!s100 d<5gUN5JgAl0jJdkJfNF61
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd|
+Z28 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd|
+!i113 1
+R11
+R12
+Athreebyeight_behaviour
+R2
+R3
+DEx4 work 18 threebyeightdecode 0 22 ni@bh@mB2[R>c;ZeSFI]G1
+!i122 1
+l28
+L12 51
+VO>HD0DDhcb8UK[Y45d:d20
+!s100 hnHCdP0:Z;IId2AE0PMN72
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
