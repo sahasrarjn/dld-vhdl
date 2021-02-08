@@ -23,9 +23,9 @@ VDKVSzLlZZ6bnVK8Jc[gJQ0
 !s100 l9F:fQ@PDTfDKa6GiB]kE3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1612695806
+Z7 !s110 1612761267
 !i10b 1
-Z8 !s108 1612695806.000000
+Z8 !s108 1612761267.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/basic_gates.vhd|
 Z10 !s107 C:/iitb/dld-vhdl/lab2/basic_gates.vhd|
 !i113 1
@@ -51,7 +51,7 @@ R10
 R11
 R12
 Edecodetest
-Z13 w1612692832
+Z13 w1612761251
 R2
 R3
 !i122 3
@@ -64,10 +64,10 @@ V9o64Qdl0[2GdI:]z^ZGUd2
 !s100 E6^aN_YlCQ1FzLhN@m2Z[1
 R6
 31
-Z16 !s110 1612695807
+R7
 !i10b 1
-Z17 !s108 1612695807.000000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
 !i113 1
 R11
@@ -75,19 +75,19 @@ R12
 Abehavior
 R2
 R3
-Z19 DEx4 work 10 decodetest 0 22 9o64Qdl0[2GdI:]z^ZGUd2
+Z17 DEx4 work 10 decodetest 0 22 9o64Qdl0[2GdI:]z^ZGUd2
 !i122 3
 l26
-Z20 L7 113
-Z21 Vi[[m>D2nkHo?C<JN2Y>3;0
-Z22 !s100 nmNY9@oNPHIcj0LN;oK<M3
+Z18 L7 113
+Z19 VU^LDna_9LdLZ]J0Z6H7ci3
+Z20 !s100 @]2nfK=^EWOHKBcbn>o?c0
 R6
 31
-R16
+R7
 !i10b 1
-R17
-R18
-Z23 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
+R8
+R16
+Z21 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode/../ThreebyEightDecodeTest.vhd|
 !i113 1
 R11
 R12
@@ -124,7 +124,7 @@ VhBLT8NhCkCf6d<FV^ZNgE1
 !s100 3?@B_CVgNm>T`kR2l:L^;1
 R6
 31
-R16
+R7
 !i10b 1
 R8
 R9
@@ -165,7 +165,7 @@ VcX?@M=OWS@=^?8mcV@add1
 !s100 M9mDKzm?d9NK>cee?53`J1
 R6
 31
-R16
+R7
 !i10b 1
 R8
 R9
@@ -206,7 +206,7 @@ VDjnm=VOd[MlTVb7<mT<W50
 !s100 Y[m[C[X4@EAhk8>V1VM3e3
 R6
 31
-R16
+R7
 !i10b 1
 R8
 R9
@@ -256,22 +256,22 @@ R10
 R11
 R12
 Ethreebyeightdecode
-Z24 w1612695479
+Z22 w1612695479
 R2
 R3
 !i122 1
 R0
-Z25 8C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
-Z26 FC:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
+Z23 8C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
+Z24 FC:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd
 l0
 L5 1
 Vni@bh@mB2[R>c;ZeSFI]G1
 !s100 d<5gUN5JgAl0jJdkJfNF61
 R6
 31
-R7
+Z25 !s110 1612761266
 !i10b 1
-R8
+Z26 !s108 1612761266.000000
 Z27 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd|
 Z28 !s107 C:/iitb/dld-vhdl/lab2/ThreebyEightDecode.vhd|
 !i113 1
@@ -288,9 +288,9 @@ VO>HD0DDhcb8UK[Y45d:d20
 !s100 hnHCdP0:Z;IId2AE0PMN72
 R6
 31
-R7
+R25
 !i10b 1
-R8
+R26
 R27
 R28
 !i113 1
