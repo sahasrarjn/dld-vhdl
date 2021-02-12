@@ -1,0 +1,333 @@
+|TwoByFourDecode
+i[0] => TwoByOneMux:not1.sel
+i[0] => TwoByOneMux:and1.i[0]
+i[0] => TwoByOneMux:and1.sel
+i[0] => TwoByOneMux:and3.i[0]
+i[0] => TwoByOneMux:and3.sel
+i[1] => TwoByOneMux:not2.sel
+i[1] => TwoByOneMux:and2.i[1]
+i[1] => TwoByOneMux:and3.i[1]
+en => TwoByOneMux:enable0.i[0]
+en => TwoByOneMux:enable0.sel
+en => TwoByOneMux:enable1.i[0]
+en => TwoByOneMux:enable1.sel
+en => TwoByOneMux:enable2.i[0]
+en => TwoByOneMux:enable2.sel
+en => TwoByOneMux:enable3.i[0]
+en => TwoByOneMux:enable3.sel
+z[0] <= TwoByOneMux:enable0.z
+z[1] <= TwoByOneMux:enable1.z
+z[2] <= TwoByOneMux:enable2.z
+z[3] <= TwoByOneMux:enable3.z
+
+
+|TwoByFourDecode|TwobyOneMux:not1
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not2
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:not2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:not2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and0
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:and0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and1
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and2
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and3
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:and3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:and3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable0
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:enable0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable1
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:enable1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable2
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:enable2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable3
+i[0] => and_gate:andgate1.a
+i[1] => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|TwoByFourDecode|TwobyOneMux:enable3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoByFourDecode|TwobyOneMux:enable3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

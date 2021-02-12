@@ -1,0 +1,257 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/iitb/dld-vhdl/3/TwoByFourDecode/simulation/modelsim
+Eand_gate
+Z1 w1613126481
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z4 8C:/iitb/dld-vhdl/3/basic_gates.vhd
+Z5 FC:/iitb/dld-vhdl/3/basic_gates.vhd
+l0
+L8 1
+VDKVSzLlZZ6bnVK8Jc[gJQ0
+!s100 l9F:fQ@PDTfDKa6GiB]kE3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1613132671
+!i10b 1
+Z8 !s108 1613132671.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/3/basic_gates.vhd|
+Z10 !s107 C:/iitb/dld-vhdl/3/basic_gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aand_behaviour
+R2
+R3
+DEx4 work 8 and_gate 0 22 DKVSzLlZZ6bnVK8Jc[gJQ0
+!i122 3
+l35
+L34 4
+VoeZ:[d[<10emfl1LfnmPW2
+!s100 ?Mm1D:AFgD1VLe6i3UjnZ1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enot_gate
+R1
+R2
+R3
+!i122 3
+R0
+R4
+R5
+l0
+L26 1
+VEN3a^33H^FYU_Pa?^2`2?0
+!s100 M=[1[E?d[Z@bzQHhogZ^61
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Anot_behaviour
+R2
+R3
+DEx4 work 8 not_gate 0 22 EN3a^33H^FYU_Pa?^2`2?0
+!i122 3
+l47
+L46 4
+V;XBzg1U=X9i=OSXkYiHVV2
+!s100 V^[Yk_B;f1WnE4`5ccj2<3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_gate
+R1
+R2
+R3
+!i122 3
+R0
+R4
+R5
+l0
+L17 1
+Vo[^bDSXX3ZYi]k554Qz2b1
+!s100 i;4gCljQ3ZWM_HO4:<nH^1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aor_behaviour
+R2
+R3
+DEx4 work 7 or_gate 0 22 o[^bDSXX3ZYi]k554Qz2b1
+!i122 3
+l41
+L40 4
+VI;=BcKKFCmmXl;1h1jT1m1
+!s100 1z>3Fk`jdWC4=?cP7;j@d1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etest
+Z13 w1613130985
+R2
+R3
+!i122 4
+R0
+Z14 8C:/iitb/dld-vhdl/3/TwoByFourDecode/../TwoByFourDecodeTest.vhd
+Z15 FC:/iitb/dld-vhdl/3/TwoByFourDecode/../TwoByFourDecodeTest.vhd
+l0
+L4 1
+VGGmf6>`RWGZC2z=He``6]0
+!s100 L@aSM3N:dZ<1VVU3FKV_V3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/3/TwoByFourDecode/../TwoByFourDecodeTest.vhd|
+!s107 C:/iitb/dld-vhdl/3/TwoByFourDecode/../TwoByFourDecodeTest.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z17 DEx4 work 4 test 0 22 GGmf6>`RWGZC2z=He``6]0
+!i122 4
+l25
+Z18 L7 68
+Z19 VBCQaHHjG3gNaj2h^_g=2S3
+Z20 !s100 If7C7n=o]gUm9o]Of@`lJ1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+Z21 !s107 C:/iitb/dld-vhdl/3/TwoByFourDecode/../TwoByFourDecodeTest.vhd|
+!i113 1
+R11
+R12
+Etwobyfourdecode
+Z22 w1613132524
+R2
+R3
+!i122 2
+R0
+Z23 8C:/iitb/dld-vhdl/3/TwoByFourDecode.vhd
+Z24 FC:/iitb/dld-vhdl/3/TwoByFourDecode.vhd
+l0
+L9 1
+V;_zD?J=GW>Ua44;29iCOM1
+!s100 z=ooG`X^GHk03lQ@bhbMM2
+R6
+31
+R7
+!i10b 1
+R8
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/3/TwoByFourDecode.vhd|
+Z26 !s107 C:/iitb/dld-vhdl/3/TwoByFourDecode.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 15 twobyfourdecode 0 22 ;_zD?J=GW>Ua44;29iCOM1
+!i122 2
+l37
+L16 77
+V6H`2LRPlV5jWojIHmk]IS0
+!s100 `0PA:ZdnhI4RV4WE^2`X70
+R6
+31
+R7
+!i10b 1
+R8
+R25
+R26
+!i113 1
+R11
+R12
+Etwobyonemux
+Z27 w1613125952
+R2
+R3
+!i122 1
+R0
+Z28 8C:/iitb/dld-vhdl/3/TwoByOneMux.vhd
+Z29 FC:/iitb/dld-vhdl/3/TwoByOneMux.vhd
+l0
+L9 1
+VIo=[<G[274?S4d?;0dL782
+!s100 eeJ:NWQCREXPPPYbW7a[F1
+R6
+31
+R7
+!i10b 1
+R8
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/iitb/dld-vhdl/3/TwoByOneMux.vhd|
+Z31 !s107 C:/iitb/dld-vhdl/3/TwoByOneMux.vhd|
+!i113 1
+R11
+R12
+Atwobyonemux_behaviour
+R2
+R3
+DEx4 work 11 twobyonemux 0 22 Io=[<G[274?S4d?;0dL782
+!i122 1
+l37
+L16 35
+VBb4icY<jLK]V3dlP;6?;N3
+!s100 ``A;0_JT938Od`Ga>6ePR2
+R6
+31
+R7
+!i10b 1
+R8
+R30
+R31
+!i113 1
+R11
+R12
