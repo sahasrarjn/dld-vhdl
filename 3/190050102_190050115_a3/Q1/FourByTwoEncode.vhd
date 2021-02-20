@@ -15,13 +15,15 @@ end entity;
 -- architecture of 4x2 encoder
 architecture structure  of FourByTwoEncode is 
 
+    -- Will use these signals to store temp signals formed
     Signal v1 : std_logic_vector(1 downto 0);
     Signal v2 : std_logic_vector(1 downto 0);
-	 Signal v3 : std_logic_vector(1 downto 0);
+	Signal v3 : std_logic_vector(1 downto 0);
     Signal v4 : std_logic_vector(1 downto 0);
-	 Signal zt : std_logic_vector(1 downto 0);
+	Signal zt : std_logic_vector(1 downto 0);
 
-    -- declare components
+
+    -- declared component 2x1 MUX
     component TwoByOneMux
         port(   i : in std_logic_vector(1 downto 0);
                 sel : in std_logic;       
@@ -34,9 +36,15 @@ architecture structure  of FourByTwoEncode is
 	  v2(0) <= i(2);
 	  v2(1) <= i(3);
 	  
+	  -- MUX is used to behave like an OR gate here with giving v(1) as the sel pin
+	  
+	  -- z(0) = zt(0) AND en
+	  -- zt(0) = i(1) OR i(3)
 	  mux1 : TwoByOneMux
 	  port map(v1,v1(1),zt(0));
 
+	  -- z(0) = zt(0) AND en
+	  -- zt(0) = i(2) OR i(3)
 	  mux2 : TwoByOneMux
 	  port map(v2,v2(1),zt(1));
 	  
@@ -45,7 +53,7 @@ architecture structure  of FourByTwoEncode is
 	  v4(0) <= en;
 	  v4(1) <= zt(1);
 	  
-	  
+	  -- MUX is used to behave like an AND gate here with giving v(0) or en(here) as the sel pin
 	  muxEn1 : TwoByOneMux
 	  port map(v3,en,z(0));
 	  

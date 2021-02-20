@@ -1,3 +1,4 @@
+-- 3 basic gates AND, OR and NOT entities have been declared here
 library work;
 use work.all;
 
@@ -28,8 +29,6 @@ port(a : in std_logic;
 	  c:out std_logic);
 end entity;
 
-
-
 -- architecture of AND gate
 architecture and_behaviour of and_gate is
 begin
@@ -47,3 +46,6 @@ architecture not_behaviour of not_gate is
 begin
 	c <= not a;
 end not_behaviour;
+
+
+
