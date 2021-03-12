@@ -14,7 +14,7 @@ entity Generator is
 end Generator;
 
 -- architecture of 8-bit Kogge Stone Adder-Subtractor
-architecture structure of carry is 
+architecture structure of Generator is 
 
     Signal Bc : std_logic;
     Signal def : std_logic_vector(1 downto 0);
