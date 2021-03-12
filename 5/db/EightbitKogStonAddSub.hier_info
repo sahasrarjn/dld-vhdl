@@ -1,0 +1,3703 @@
+|EightbitKogStonAddSub
+a[0] => generator:gen0.A
+a[1] => generator:gen1.A
+a[2] => generator:gen2.A
+a[3] => generator:gen3.A
+a[4] => generator:gen4.A
+a[5] => generator:gen5.A
+a[6] => generator:gen6.A
+a[7] => generator:gen7.A
+b[0] => generator:gen0.B
+b[1] => generator:gen1.B
+b[2] => generator:gen2.B
+b[3] => generator:gen3.B
+b[4] => generator:gen4.B
+b[5] => generator:gen5.B
+b[6] => generator:gen6.B
+b[7] => generator:gen7.B
+cin => TwoByOneMux:and0.a
+cin => TwoByOneMux:and0.sel
+cin => TwoByOneMux:and1.a
+cin => TwoByOneMux:and1.sel
+cin => TwoByOneMux:and2.a
+cin => TwoByOneMux:and2.sel
+cin => TwoByOneMux:and3.a
+cin => TwoByOneMux:and3.sel
+cin => TwoByOneMux:and4.a
+cin => TwoByOneMux:and4.sel
+cin => TwoByOneMux:and5.a
+cin => TwoByOneMux:and5.sel
+cin => TwoByOneMux:and6.a
+cin => TwoByOneMux:and6.sel
+cin => TwoByOneMux:and7.a
+cin => TwoByOneMux:and7.sel
+cin => TwoByOneMux:not8.sel
+cin => TwoByOneMux:xor0.a
+sum[0] <= TwoByOneMux:xor0.z
+sum[1] <= TwoByOneMux:xor1.z
+sum[2] <= TwoByOneMux:xor2.z
+sum[3] <= TwoByOneMux:xor3.z
+sum[4] <= TwoByOneMux:xor4.z
+sum[5] <= TwoByOneMux:xor5.z
+sum[6] <= TwoByOneMux:xor6.z
+sum[7] <= TwoByOneMux:xor7.z
+cout <= TwoByOneMux:or7.z
+
+
+|EightbitKogStonAddSub|Generator:gen0
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen0|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen1|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen2|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen3|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen4|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen5|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7
+A => TwoByOneMux:and1.a
+A => TwoByOneMux:and1.sel
+A => TwoByOneMux:xor1.sel
+B => TwoByOneMux:not1.sel
+B => TwoByOneMux:and1.b
+B => TwoByOneMux:xor1.a
+G_out <= TwoByOneMux:and1.z
+P_out <= TwoByOneMux:xor1.z
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|Generator:gen7|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen11|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen12|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen13|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen14|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen15|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen16|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen17|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen22|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen23|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen24|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen25|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen30|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen31|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen32|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33
+ga => TwoByOneMux:or1.b
+ga => TwoByOneMux:or1.sel
+pa => TwoByOneMux:and1.a
+pa => TwoByOneMux:and1.sel
+pa => TwoByOneMux:and2.a
+pa => TwoByOneMux:and2.sel
+gb => TwoByOneMux:and2.b
+pb => TwoByOneMux:and1.b
+g <= TwoByOneMux:or1.z
+p <= TwoByOneMux:and1.z
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|carryGen:cargen33|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and0
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and3
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and4
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and4|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and4|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and4|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and4|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and5
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and5|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and5|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and5|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and5|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and6
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and6|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and6|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and6|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and6|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and7
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and7|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and7|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and7|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:and7|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or0
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or3
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or4
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or4|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or4|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or4|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or4|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or5
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or5|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or5|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or5|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or5|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or6
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or6|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or6|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or6|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or6|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or7
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or7|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or7|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or7|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:or7|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not0
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not3
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not4
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not4|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not4|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not4|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not4|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not5
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not5|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not5|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not5|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not5|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not6
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not6|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not6|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not6|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not6|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not7
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not7|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not7|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not7|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not7|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not8
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not8|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not8|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not8|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:not8|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor0
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor0|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor0|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor0|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor0|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor1
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor1|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor1|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor1|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor1|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor2
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor2|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor2|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor2|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor2|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor3
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor3|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor3|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor3|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor3|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor4
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor4|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor4|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor4|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor4|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor5
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor5|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor5|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor5|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor5|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor6
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor6|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor6|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor6|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor6|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor7
+a => and_gate:andgate1.a
+b => and_gate:andgate2.a
+sel => not_gate:notgate.a
+sel => and_gate:andgate2.b
+z <= or_gate:orgate.c
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor7|not_gate:notgate
+a => c.DATAIN
+c <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor7|and_gate:andgate1
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor7|and_gate:andgate2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EightbitKogStonAddSub|TwobyOneMux:xor7|or_gate:orgate
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

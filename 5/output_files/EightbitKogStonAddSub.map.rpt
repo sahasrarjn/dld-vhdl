@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EightbitKogStonAddSub
-Fri Mar 12 18:41:09 2021
+Fri Mar 12 18:48:46 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,23 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "TwobyOneMux:not8"
+ 10. Port Connectivity Checks: "TwobyOneMux:not7"
+ 11. Port Connectivity Checks: "TwobyOneMux:not6"
+ 12. Port Connectivity Checks: "TwobyOneMux:not5"
+ 13. Port Connectivity Checks: "TwobyOneMux:not4"
+ 14. Port Connectivity Checks: "TwobyOneMux:not3"
+ 15. Port Connectivity Checks: "TwobyOneMux:not2"
+ 16. Port Connectivity Checks: "TwobyOneMux:not1"
+ 17. Port Connectivity Checks: "TwobyOneMux:not0"
+ 18. Port Connectivity Checks: "Generator:gen0|TwobyOneMux:not1"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +50,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Mar 12 18:41:09 2021           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; EightbitKogStonAddSub                       ;
-; Top-level Entity Name       ; EightbitKogStonAddSub                       ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 12 18:48:46 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; EightbitKogStonAddSub                       ;
+; Top-level Entity Name           ; EightbitKogStonAddSub                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 26                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------+
@@ -155,13 +176,238 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; TwoByOneMux.vhd                  ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/TwoByOneMux.vhd           ;         ;
+; generator.vhd                    ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/generator.vhd             ;         ;
+; EightbitKogStonAddSub.vhd        ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd ;         ;
+; carryGen.vhd                     ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/carryGen.vhd              ;         ;
+; basic_gates.vhd                  ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/basic_gates.vhd           ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 14        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 24        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 4         ;
+;     -- 5 input functions                    ; 12        ;
+;     -- 4 input functions                    ; 2         ;
+;     -- <=3 input functions                  ; 6         ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 26        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; cin~input ;
+; Maximum fan-out                             ; 9         ;
+; Total fan-out                               ; 144       ;
+; Average fan-out                             ; 1.89      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name           ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------+-----------------------+--------------+
+; |EightbitKogStonAddSub       ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 26   ; 0            ; |EightbitKogStonAddSub                                                      ; EightbitKogStonAddSub ; work         ;
+;    |Generator:gen6|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|Generator:gen6                                       ; Generator             ; work         ;
+;       |TwobyOneMux:xor1|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1                      ; TwobyOneMux           ; work         ;
+;          |or_gate:orgate|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|Generator:gen6|TwobyOneMux:xor1|or_gate:orgate       ; or_gate               ; work         ;
+;    |TwobyOneMux:or1|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or1                                      ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or1|or_gate:orgate                       ; or_gate               ; work         ;
+;    |TwobyOneMux:or2|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or2                                      ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or2|or_gate:orgate                       ; or_gate               ; work         ;
+;    |TwobyOneMux:or7|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or7                                      ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:or7|or_gate:orgate                       ; or_gate               ; work         ;
+;    |TwobyOneMux:xor0|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor0                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor0|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor1|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor1                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor1|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor2|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor2                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor2|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor3|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor3                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor3|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor4|        ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor4                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor4|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor5|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor5                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor5|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor6|        ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor6                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor6|or_gate:orgate                      ; or_gate               ; work         ;
+;    |TwobyOneMux:xor7|        ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor7                                     ; TwobyOneMux           ; work         ;
+;       |or_gate:orgate|       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|TwobyOneMux:xor7|or_gate:orgate                      ; or_gate               ; work         ;
+;    |carryGen:cargen20|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen20                                    ; carryGen              ; work         ;
+;       |TwobyOneMux:and1|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1                   ; TwobyOneMux           ; work         ;
+;          |and_gate:andgate2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen20|TwobyOneMux:and1|and_gate:andgate2 ; and_gate              ; work         ;
+;    |carryGen:cargen21|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen21                                    ; carryGen              ; work         ;
+;       |TwobyOneMux:or1|      ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1                    ; TwobyOneMux           ; work         ;
+;          |or_gate:orgate|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |EightbitKogStonAddSub|carryGen:cargen21|TwobyOneMux:or1|or_gate:orgate     ; or_gate               ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not8" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not7"                                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not6" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not5" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not4" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not3" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not2" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not1" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "TwobyOneMux:not0" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; a    ; Input ; Info     ; Stuck at VCC       ;
+; b    ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "Generator:gen0|TwobyOneMux:not1" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; a    ; Input ; Info     ; Stuck at VCC                      ;
+; b    ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 24                          ;
+;     normal            ; 24                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 26                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.59                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar 12 18:41:02 2021
+    Info: Processing started: Fri Mar 12 18:48:38 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EightbitKogStonAddSub -c EightbitKogStonAddSub
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -169,18 +415,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file TwoByOn
     Info (12022): Found design unit 1: TwobyOneMux-twobyOneMux_behaviour File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 17
     Info (12023): Found entity 1: TwobyOneMux File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file generator.vhd
-    Info (12022): Found design unit 1: carry-structure File: /home/sahasra/Documents/dld/5/generator.vhd Line: 17
+    Info (12022): Found design unit 1: Generator-structure File: /home/sahasra/Documents/dld/5/generator.vhd Line: 17
     Info (12023): Found entity 1: Generator File: /home/sahasra/Documents/dld/5/generator.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file EightbitKogStonAddSub.vhd
     Info (12022): Found design unit 1: EightbitKogStonAddSub-structure File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 17
     Info (12023): Found entity 1: EightbitKogStonAddSub File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 9
-Error (10500): VHDL syntax error at carryGen.vhd(16) near text "end";  expecting an identifier ("end" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 16
-Error (10500): VHDL syntax error at carryGen.vhd(32) near text "component";  expecting an identifier ("component" is a reserved keyword), or "constant", or "file", or "signal", or "variable" File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 32
-Error (10500): VHDL syntax error at carryGen.vhd(37) near text "component";  expecting ";", or an identifier ("component" is a reserved keyword), or "entity" File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 37
-Error (10500): VHDL syntax error at carryGen.vhd(71) near text "end";  expecting ";" File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 71
-Error (10396): VHDL syntax error at carryGen.vhd(71): name used in construct must match previously specified name "carryGen" File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 71
-Error (10523): Ignored construct carryGen at carryGen.vhd(9) due to previous errors File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 9
-Info (12021): Found 0 design units, including 0 entities, in source file carryGen.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file carryGen.vhd
+    Info (12022): Found design unit 1: carryGen-structure File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 19
+    Info (12023): Found entity 1: carryGen File: /home/sahasra/Documents/dld/5/carryGen.vhd Line: 9
 Info (12021): Found 6 design units, including 3 entities, in source file basic_gates.vhd
     Info (12022): Found design unit 1: and_gate-and_behaviour File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 33
     Info (12022): Found design unit 2: or_gate-or_behaviour File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 39
@@ -188,10 +430,24 @@ Info (12021): Found 6 design units, including 3 entities, in source file basic_g
     Info (12023): Found entity 1: and_gate File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 9
     Info (12023): Found entity 2: or_gate File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 18
     Info (12023): Found entity 3: not_gate File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 27
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
-    Error: Peak virtual memory: 473 megabytes
-    Error: Processing ended: Fri Mar 12 18:41:09 2021
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:15
+Info (12127): Elaborating entity "EightbitKogStonAddSub" for the top level hierarchy
+Info (12128): Elaborating entity "Generator" for hierarchy "Generator:gen0" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 84
+Info (12128): Elaborating entity "TwobyOneMux" for hierarchy "Generator:gen0|TwobyOneMux:not1" File: /home/sahasra/Documents/dld/5/generator.vhd Line: 37
+Info (12128): Elaborating entity "not_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|not_gate:notgate" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 39
+Info (12128): Elaborating entity "and_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|and_gate:andgate1" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 42
+Info (12128): Elaborating entity "or_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|or_gate:orgate" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 48
+Info (12128): Elaborating entity "carryGen" for hierarchy "carryGen:cargen11" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 107
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Fri Mar 12 18:48:46 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

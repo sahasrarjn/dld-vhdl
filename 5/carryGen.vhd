@@ -47,7 +47,7 @@ architecture structure of carryGen is
     port map(pa, gb, pa, x1);
     -- g = ga + x = ga + pa.gb
     or1 : TwoByOneMux
-    port map(x, ga, ga, g);
+    port map(x1, ga, ga, g);
 
 ---- ------------------------------------------------
 ---- Not gates

@@ -39,7 +39,7 @@ architecture structure of EightbitKogStonAddSub is
     signal cinc : std_logic;
 
     signal def : std_logic_vector(1 downto 0);
-    signal v0 : std_logic_vector(1 downto 0);
+    signal v0 : std_logic_vector(7 downto 0);
 
 
     -- declared component 2x1 MUX
@@ -105,19 +105,19 @@ architecture structure of EightbitKogStonAddSub is
 
 	-- compute g,p
 	cargen11 : carryGen
-	port map(g_0(0),p_0(0),g_0(1),p_0(1),g_1(1),p_1(1));
+	port map(g_0(0),p_0(0),g_0(1),p_0(1),g1(1),p1(1));
 	cargen12 : carryGen
-	port map(g_0(1),p_0(1),g_0(2),p_0(2),g_1(2),p_1(2));
+	port map(g_0(1),p_0(1),g_0(2),p_0(2),g1(2),p1(2));
 	cargen13 : carryGen
-	port map(g_0(2),p_0(2),g_0(3),p_0(3),g_1(3),p_1(3));
+	port map(g_0(2),p_0(2),g_0(3),p_0(3),g1(3),p1(3));
 	cargen14 : carryGen
-	port map(g_0(3),p_0(3),g_0(4),p_0(4),g_1(4),p_1(4));
+	port map(g_0(3),p_0(3),g_0(4),p_0(4),g1(4),p1(4));
 	cargen15 : carryGen
-	port map(g_0(4),p_0(4),g_0(5),p_0(5),g_1(5),p_1(5));
+	port map(g_0(4),p_0(4),g_0(5),p_0(5),g1(5),p1(5));
 	cargen16 : carryGen
-	port map(g_0(5),p_0(5),g_0(6),p_0(6),g_1(6),p_1(6));
+	port map(g_0(5),p_0(5),g_0(6),p_0(6),g1(6),p1(6));
 	cargen17 : carryGen
-	port map(g_0(6),p_0(6),g_0(7),p_0(7),g_1(7),p_1(7));
+	port map(g_0(6),p_0(6),g_0(7),p_0(7),g1(7),p1(7));
 -- ------------------------------------------------------
 	
 -- -Stage 2----------------------------------------------
