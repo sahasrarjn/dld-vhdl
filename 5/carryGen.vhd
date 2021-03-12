@@ -12,11 +12,11 @@ port ( 	ga : in std_logic;
 		gb : in std_logic; 
 		pb : in std_logic;
 		g : out std_logic;
-		p : out std_logic;
+		p : out std_logic);
 end entity;
 
 -- architecture of 8-bit Kogge Stone Adder-Subtractor
-architecture structure of carry is 
+architecture structure of carryGen is 
 
 
     -- Will use these signals to store temp signals formed
@@ -47,7 +47,7 @@ architecture structure of carry is
     port map(pa, gb, pa, x1);
     -- g = ga + x = ga + pa.gb
     or1 : TwoByOneMux
-    port map(x, ga, ga, g)
+    port map(x, ga, ga, g);
 
 ---- ------------------------------------------------
 ---- Not gates
