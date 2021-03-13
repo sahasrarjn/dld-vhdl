@@ -19,7 +19,11 @@ end entity;
 architecture structure of carryGen is 
 
 
-    -- Will use this signals to store temp signals formed
+    -- Will use these signals to store temp signals formed
+    Signal gac : std_logic;
+    Signal gbc : std_logic;
+    Signal pac : std_logic;
+    Signal pbc : std_logic;
     Signal x1 : std_logic;
     
 
@@ -45,6 +49,22 @@ architecture structure of carryGen is
     or1 : TwoByOneMux
     port map(x1, ga, ga, g);
 
+---- ------------------------------------------------
+---- Not gates
+--    -- 1 0 vector
+--		def(0) <= '1';
+--		def(1) <= '0';
+		
+--	-- Implemented NOT gate using 2x1 MUX
+--      	not1 : TwoByOneMux
+--      	port map(def(0),def(1),ga,gac);
+--      	not2 : TwoByOneMux
+--      	port map(def(0),def(1),pa,pac);
+--      	not3 : TwoByOneMux
+--      	port map(def(0),def(1),gb,gbc);
+--      	not4 : TwoByOneMux
+--      	port map(def(0),def(1),pb,pbc);
+---- -------------------------------------------------
 
 -- ------------------------------------------------------------
 	  

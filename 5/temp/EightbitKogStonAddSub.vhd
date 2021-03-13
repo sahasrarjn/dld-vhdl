@@ -67,6 +67,15 @@ architecture structure of EightbitKogStonAddSub is
            		G_out : out STD_LOGIC;
            		P_out : out STD_LOGIC);
     end component;
+
+    -- declared component Post Generator
+    component post_generator
+    	Port ( 	g : in STD_LOGIC;
+           		p : in STD_LOGIC;
+           		c0 : in STD_LOGIC;
+           		c : out STD_LOGIC;
+           		s : out STD_LOGIC);
+    end component;
     
 
     begin
@@ -133,7 +142,7 @@ architecture structure of EightbitKogStonAddSub is
 	port map(g1(5),p1(5),g1(7),p1(7),g2(7),p2(7));
 -- ------------------------------------------------------
 
--- -Stage 3----------------------------------------------
+-- -Stage 2----------------------------------------------
 	-- store
 	g3(0) <= g2(0);
 	p3(0) <= p2(0);
