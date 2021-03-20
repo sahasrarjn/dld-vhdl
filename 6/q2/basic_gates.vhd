@@ -56,5 +56,5 @@ end not_behaviour;
 -- architecture of 3-AND gate
 architecture and3_behaviour of and3_gate is
 begin
-	d <= a and b and c;
+	d <= (a and (b and c));
 end and3_behaviour;
