@@ -1,4 +1,4 @@
--- 4 basic gates AND, 3-AND, OR and NOT entities have been declared here
+-- 2 basic gates AND, OR and NOT entities have been declared here
 library IEEE;
 use IEEE.std_logic_1164.all;
 
@@ -29,12 +29,6 @@ end entity;
 library IEEE;
 use IEEE.std_logic_1164.all;
 
--- 3-AND gate
-entity and3_gate is
-port(a,b, c: in std_logic;
-	  d:out std_logic);
-end entity;
-
 -- architecture of AND gate
 architecture and_behaviour of and_gate is
 begin
@@ -52,9 +46,3 @@ architecture not_behaviour of not_gate is
 begin
 	c <= not a;
 end not_behaviour;
-
--- architecture of 3-AND gate
-architecture and3_behaviour of and3_gate is
-begin
-	d <= (a and (b and c));
-end and3_behaviour;
