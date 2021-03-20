@@ -1,0 +1,115 @@
+# do EightbitKogStonAddSub_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:20 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestBench
+# -- Compiling architecture arch of TestBench
+# End time: 18:34:20 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/TwoByOneMux.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:20 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/TwoByOneMux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TwobyOneMux
+# -- Compiling architecture twobyOneMux_behaviour of TwobyOneMux
+# End time: 18:34:20 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/generator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:20 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Generator
+# -- Compiling architecture structure of Generator
+# End time: 18:34:20 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:20 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity EightbitKogStonAddSub
+# -- Compiling architecture structure of EightbitKogStonAddSub
+# End time: 18:34:21 on Mar 13,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/carryGen.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:21 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/carryGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity carryGen
+# -- Compiling architecture structure of carryGen
+# End time: 18:34:21 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/basic_gates.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:21 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/basic_gates.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity and_gate
+# -- Compiling entity or_gate
+# -- Compiling entity not_gate
+# -- Compiling architecture and_behaviour of and_gate
+# -- Compiling architecture or_behaviour of or_gate
+# -- Compiling architecture not_behaviour of not_gate
+# End time: 18:34:21 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:34:21 on Mar 13,2021
+# vcom -reportprogress 300 -93 -work work /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestBench
+# -- Compiling architecture arch of TestBench
+# End time: 18:34:21 on Mar 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench_EightbitKogStonAddSub
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench_EightbitKogStonAddSub 
+# Start time: 18:34:21 on Mar 13,2021
+# ** Error: (vsim-3170) Could not find 'Testbench_EightbitKogStonAddSub'.
+#         Searched libraries:
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/altera
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/220model
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/sgate
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/altera_mf
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/altera_lnsim
+#             /home/sahasra/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/cyclonev
+#             /home/sahasra/Documents/dld/5/simulation/modelsim/rtl_work
+#             /home/sahasra/Documents/dld/5/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./EightbitKogStonAddSub_run_msim_rtl_vhdl.do PAUSED at line 17
+# End time: 18:34:32 on Mar 13,2021, Elapsed time: 0:00:11
+# Errors: 1, Warnings: 0

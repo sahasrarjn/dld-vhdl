@@ -1,0 +1,341 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/sahasra/Documents/dld/5/simulation/modelsim
+Eand_gate
+Z1 w1615554523
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+R0
+Z4 8/home/sahasra/Documents/dld/5/basic_gates.vhd
+Z5 F/home/sahasra/Documents/dld/5/basic_gates.vhd
+l0
+L9 1
+VW_@4o=ASh26;jI9SeDkU21
+!s100 la0hFo<nJl_Ke`?A0FH@e2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1615640661
+!i10b 1
+Z8 !s108 1615640661.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/basic_gates.vhd|
+Z10 !s107 /home/sahasra/Documents/dld/5/basic_gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aand_behaviour
+R2
+R3
+DEx4 work 8 and_gate 0 22 W_@4o=ASh26;jI9SeDkU21
+!i122 5
+l34
+L33 4
+VU=L;kTdbC0jzY>k^W9RRJ3
+!s100 @4mbJT7FUa4]mRmOz@I[[0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecarrygen
+Z13 w1615639926
+R2
+R3
+!i122 4
+R0
+Z14 8/home/sahasra/Documents/dld/5/carryGen.vhd
+Z15 F/home/sahasra/Documents/dld/5/carryGen.vhd
+l0
+L9 1
+Vz_Z5Y^5YJ17dOZNh6;BjS3
+!s100 nS?jb8cT^<zbikBcM36[L0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/carryGen.vhd|
+Z17 !s107 /home/sahasra/Documents/dld/5/carryGen.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 8 carrygen 0 22 z_Z5Y^5YJ17dOZNh6;BjS3
+!i122 4
+l35
+L19 33
+VV@@ZcK8CB3>M8]S7VIMzT2
+!s100 km2d[4mJNJiP>@oeSja`C3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eeightbitkogstonaddsub
+R13
+R2
+R3
+!i122 3
+R0
+Z18 8/home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd
+Z19 F/home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd
+l0
+L9 1
+V;RP>WkAR_>U8Kk8fM2z]g0
+!s100 <9USP8_dlbT8gOa;7:;;?2
+R6
+31
+R7
+!i10b 1
+Z20 !s108 1615640660.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd|
+Z22 !s107 /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 21 eightbitkogstonaddsub 0 22 ;RP>WkAR_>U8Kk8fM2z]g0
+!i122 3
+l72
+L17 229
+V7^7DPVj^Ho;ID5Hk<<K9L2
+!s100 3<Bi<n;WjWJlgR?:i1@4M3
+R6
+31
+R7
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R11
+R12
+Egenerator
+Z23 w1615554886
+R2
+R3
+!i122 2
+R0
+Z24 8/home/sahasra/Documents/dld/5/generator.vhd
+Z25 F/home/sahasra/Documents/dld/5/generator.vhd
+l0
+L9 1
+V_Z4CLRSfi;V8]@DS>Kh]D2
+!s100 Scg[8XWU9Ml=9o_CbL9MR2
+R6
+31
+Z26 !s110 1615640660
+!i10b 1
+R20
+Z27 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/generator.vhd|
+Z28 !s107 /home/sahasra/Documents/dld/5/generator.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 9 generator 0 22 _Z4CLRSfi;V8]@DS>Kh]D2
+!i122 2
+l31
+L17 32
+V<z5?PJNn@h5:?kIoLl8WV2
+!s100 _WGF4Cdf]jV^^mOLoK3@h3
+R6
+31
+R26
+!i10b 1
+R20
+R27
+R28
+!i113 1
+R11
+R12
+Enot_gate
+R1
+R2
+R3
+!i122 5
+R0
+R4
+R5
+l0
+L27 1
+VB7z>n08OkHmHT5[B49R_N0
+!s100 YRXjAbmmFO?e0h;jITNM?0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Anot_behaviour
+R2
+R3
+DEx4 work 8 not_gate 0 22 B7z>n08OkHmHT5[B49R_N0
+!i122 5
+l46
+L45 4
+VWORKSEPA<Ie0<g1XM=kF>0
+!s100 QM_DjUlj9FM?Oo^j?lISE0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_gate
+R1
+R2
+R3
+!i122 5
+R0
+R4
+R5
+l0
+L18 1
+VREKOACa?JDWS;8aQA[NAU0
+!s100 g20TifHJW@P2SdJCkM57H3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aor_behaviour
+R2
+R3
+DEx4 work 7 or_gate 0 22 REKOACa?JDWS;8aQA[NAU0
+!i122 5
+l40
+L39 4
+V9dIKWzj^0OOS7:45WADXz1
+!s100 A8f?L7=mbzoJeG7@YPECL1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z29 w1615640011
+Z30 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 6
+R0
+Z31 8/home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd
+Z32 F/home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd
+l0
+L8 1
+V46zV@M000E0VCfl_hnzcb2
+!s100 >3<0F;nXkh7EYNjE=aSKN3
+R6
+31
+R7
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd|
+Z34 !s107 /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd|
+!i113 1
+R11
+R12
+Aarch
+R30
+R2
+R3
+Z35 DEx4 work 9 testbench 0 22 46zV@M000E0VCfl_hnzcb2
+!i122 6
+l27
+Z36 L11 41
+Z37 VXKjY483e=4LWIb6a?_ORg0
+Z38 !s100 >H=IomkOh?oCZA:BbFFHk1
+R6
+31
+R7
+!i10b 1
+R8
+R33
+R34
+!i113 1
+R11
+R12
+Etwobyonemux
+R1
+R2
+R3
+!i122 1
+R0
+Z39 8/home/sahasra/Documents/dld/5/TwoByOneMux.vhd
+Z40 F/home/sahasra/Documents/dld/5/TwoByOneMux.vhd
+l0
+L9 1
+VJTUdD`5ZKgX6<[119B5Gj0
+!s100 8UoO:7@eKBWFOWAdW_L[U3
+R6
+31
+R26
+!i10b 1
+R20
+Z41 !s90 -reportprogress|300|-93|-work|work|/home/sahasra/Documents/dld/5/TwoByOneMux.vhd|
+Z42 !s107 /home/sahasra/Documents/dld/5/TwoByOneMux.vhd|
+!i113 1
+R11
+R12
+Atwobyonemux_behaviour
+R2
+R3
+DEx4 work 11 twobyonemux 0 22 JTUdD`5ZKgX6<[119B5Gj0
+!i122 1
+l38
+L17 35
+Vb^CBe`mBZd[XbnhHiEHYS1
+!s100 BG_MABg@1V91RZgNlo3f^3
+R6
+31
+R26
+!i10b 1
+R20
+R41
+R42
+!i113 1
+R11
+R12

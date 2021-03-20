@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd
 source_file = 1, /home/sahasra/Documents/dld/5/TwoByOneMux.vhd
 source_file = 1, /home/sahasra/Documents/dld/5/generator.vhd
 source_file = 1, /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EightbitKogStonAddSub
-Fri Mar 12 18:48:46 2021
+Sat Mar 13 18:30:24 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 12 18:48:46 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 13 18:30:24 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; EightbitKogStonAddSub                       ;
 ; Top-level Entity Name           ; EightbitKogStonAddSub                       ;
@@ -176,17 +176,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; TwoByOneMux.vhd                  ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/TwoByOneMux.vhd           ;         ;
-; generator.vhd                    ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/generator.vhd             ;         ;
-; EightbitKogStonAddSub.vhd        ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd ;         ;
-; carryGen.vhd                     ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/carryGen.vhd              ;         ;
-; basic_gates.vhd                  ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/basic_gates.vhd           ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++-------------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++-------------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; Testbench_EightbitKogStonAddSub.vhd ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd ;         ;
+; TwoByOneMux.vhd                     ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/TwoByOneMux.vhd                     ;         ;
+; generator.vhd                       ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/generator.vhd                       ;         ;
+; EightbitKogStonAddSub.vhd           ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd           ;         ;
+; carryGen.vhd                        ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/carryGen.vhd                        ;         ;
+; basic_gates.vhd                     ; yes             ; User VHDL File  ; /home/sahasra/Documents/dld/5/basic_gates.vhd                     ;         ;
++-------------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -407,10 +408,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Mar 12 18:48:38 2021
+    Info: Processing started: Sat Mar 13 18:30:15 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EightbitKogStonAddSub -c EightbitKogStonAddSub
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file Testbench_EightbitKogStonAddSub.vhd
+    Info (12022): Found design unit 1: TestBench-arch File: /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd Line: 11
+    Info (12023): Found entity 1: TestBench File: /home/sahasra/Documents/dld/5/Testbench_EightbitKogStonAddSub.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file TwoByOneMux.vhd
     Info (12022): Found design unit 1: TwobyOneMux-twobyOneMux_behaviour File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 17
     Info (12023): Found entity 1: TwobyOneMux File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 9
@@ -431,12 +435,12 @@ Info (12021): Found 6 design units, including 3 entities, in source file basic_g
     Info (12023): Found entity 2: or_gate File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 18
     Info (12023): Found entity 3: not_gate File: /home/sahasra/Documents/dld/5/basic_gates.vhd Line: 27
 Info (12127): Elaborating entity "EightbitKogStonAddSub" for the top level hierarchy
-Info (12128): Elaborating entity "Generator" for hierarchy "Generator:gen0" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 84
+Info (12128): Elaborating entity "Generator" for hierarchy "Generator:gen0" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 75
 Info (12128): Elaborating entity "TwobyOneMux" for hierarchy "Generator:gen0|TwobyOneMux:not1" File: /home/sahasra/Documents/dld/5/generator.vhd Line: 37
 Info (12128): Elaborating entity "not_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|not_gate:notgate" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 39
 Info (12128): Elaborating entity "and_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|and_gate:andgate1" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 42
 Info (12128): Elaborating entity "or_gate" for hierarchy "Generator:gen0|TwobyOneMux:not1|or_gate:orgate" File: /home/sahasra/Documents/dld/5/TwoByOneMux.vhd Line: 48
-Info (12128): Elaborating entity "carryGen" for hierarchy "carryGen:cargen11" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 107
+Info (12128): Elaborating entity "carryGen" for hierarchy "carryGen:cargen11" File: /home/sahasra/Documents/dld/5/EightbitKogStonAddSub.vhd Line: 98
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -445,9 +449,9 @@ Info (21057): Implemented 50 device resources after synthesis - the final resour
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 24 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 483 megabytes
-    Info: Processing ended: Fri Mar 12 18:48:46 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 489 megabytes
+    Info: Processing ended: Sat Mar 13 18:30:24 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 
