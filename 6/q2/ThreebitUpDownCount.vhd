@@ -41,6 +41,8 @@ begin
 --From kmap T0 = 1
 T(0) <= '1';
 
+ff3 : DFlipFlop
+port map(clk,rst,T(0),S(0));
 
 
 --From Kmap T1 = up'.S0 + up.S0'
@@ -59,6 +61,8 @@ port map(up,Sc(0),v3);
 orgate1 : or_gate
 port map(v2,v3,T(1));
 
+ff2 : DFlipFlop
+port map(clk,rst,T(1),S(1));
 
 
 -- From Kmap T2 = up'.S1.S0 + up.S1'.S0'
@@ -74,17 +78,10 @@ port map(v3,Sc(1),v1);
 orgate0 : or_gate
 port map(v0, v1, T(2));
 
-
-
---Now we will use flipflops to get the values for next iterations, each of T0,T1,T2 have been fed into the flipflops
 ff1 : DFlipFlop
 port map(clk,rst,T(2),S(2));
 
-ff2 : DFlipFlop
-port map(clk,rst,T(1),S(1));
 
-ff3 : DFlipFlop
-port map(clk,rst,T(0),S(0));
 
 
 --The output is simply the bits in S as defined by our states

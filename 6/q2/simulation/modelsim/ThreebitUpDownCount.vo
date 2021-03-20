@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "03/20/2021 20:17:37"
+// DATE "03/20/2021 21:25:14"
 
 // 
 // Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -156,7 +156,7 @@ defparam \rst~input .bus_hold = "false";
 defparam \rst~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N42
+// Location: LABCELL_X88_Y36_N48
 cyclonev_lcell_comb \ff3|q~0 (
 // Equation(s):
 // \ff3|q~0_combout  = ( !\rst~input_o  )
@@ -180,7 +180,7 @@ defparam \ff3|q~0 .lut_mask = 64'hFFFFFFFF00000000;
 defparam \ff3|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N44
+// Location: FF_X88_Y36_N50
 dffeas \ff3|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff3|q~0_combout ),
@@ -210,15 +210,15 @@ defparam \up~input .bus_hold = "false";
 defparam \up~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N54
+// Location: LABCELL_X88_Y36_N57
 cyclonev_lcell_comb \ff2|q~0 (
 // Equation(s):
-// \ff2|q~0_combout  = ( \ff3|q~q  & ( (!\rst~input_o  & ((!\up~input_o ) # (\ff2|q~q ))) ) ) # ( !\ff3|q~q  & ( (\up~input_o  & (!\rst~input_o  & \ff2|q~q )) ) )
+// \ff2|q~0_combout  = ( \ff3|q~q  & ( (!\up~input_o  & !\rst~input_o ) ) ) # ( !\ff3|q~q  & ( (\up~input_o  & !\rst~input_o ) ) )
 
 	.dataa(!\up~input_o ),
 	.datab(!\rst~input_o ),
 	.datac(gnd),
-	.datad(!\ff2|q~q ),
+	.datad(gnd),
 	.datae(gnd),
 	.dataf(!\ff3|q~q ),
 	.datag(gnd),
@@ -230,11 +230,11 @@ cyclonev_lcell_comb \ff2|q~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ff2|q~0 .extended_lut = "off";
-defparam \ff2|q~0 .lut_mask = 64'h0044004488CC88CC;
+defparam \ff2|q~0 .lut_mask = 64'h4444444488888888;
 defparam \ff2|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N56
+// Location: FF_X88_Y36_N59
 dffeas \ff2|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff2|q~0_combout ),
@@ -253,7 +253,7 @@ defparam \ff2|q .is_wysiwyg = "true";
 defparam \ff2|q .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N57
+// Location: LABCELL_X88_Y36_N54
 cyclonev_lcell_comb \ff1|q~0 (
 // Equation(s):
 // \ff1|q~0_combout  = ( \ff2|q~q  & ( (!\up~input_o  & (!\rst~input_o  & \ff3|q~q )) ) ) # ( !\ff2|q~q  & ( (\up~input_o  & (!\rst~input_o  & !\ff3|q~q )) ) )
@@ -277,7 +277,7 @@ defparam \ff1|q~0 .lut_mask = 64'h4040404008080808;
 defparam \ff1|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N58
+// Location: FF_X88_Y36_N55
 dffeas \ff1|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff1|q~0_combout ),
