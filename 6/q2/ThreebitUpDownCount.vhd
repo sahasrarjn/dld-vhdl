@@ -64,7 +64,6 @@ port map(Q(0),Qc(0));
 
 T(0) <= Qc(0);
 
-
 --From Kmap T1 = up'.(Q0 xor Q1)' + up.(Q0 xor Q1)
 xorgate0 : xor_gate
 port map(Q(0),Q(1),v1);
@@ -84,6 +83,8 @@ port map(v2,upc,v4);
 orgate1 : or_gate
 port map(v4,v3,T(1));
 
+ff2 : DFlipFlop
+port map(clk,rst,T(1),S(1));
 
 
 -- From Kmap T2 = up'.S1.S0 + up.S1'.S0'
