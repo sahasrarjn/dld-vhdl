@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ThreebitUpDownCount
-Sat Mar 20 21:24:32 2021
+Sat Mar 20 23:01:26 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,10 +14,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "DFlipFlop:ff3"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Mar 20 21:24:32 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 20 23:01:26 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ThreebitUpDownCount                         ;
 ; Top-level Entity Name           ; ThreebitUpDownCount                         ;
@@ -189,9 +188,9 @@ https://fpgasoftware.intel.com/eula.
 ; Combinational ALUT usage for logic          ; 3               ;
 ;     -- 7 input functions                    ; 0               ;
 ;     -- 6 input functions                    ; 0               ;
-;     -- 5 input functions                    ; 0               ;
+;     -- 5 input functions                    ; 1               ;
 ;     -- 4 input functions                    ; 1               ;
-;     -- <=3 input functions                  ; 2               ;
+;     -- <=3 input functions                  ; 1               ;
 ;                                             ;                 ;
 ; Dedicated logic registers                   ; 3               ;
 ;                                             ;                 ;
@@ -200,9 +199,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; DFlipFlop:ff3|q ;
-; Maximum fan-out                             ; 3               ;
-; Total fan-out                               ; 23              ;
-; Average fan-out                             ; 1.28            ;
+; Maximum fan-out                             ; 4               ;
+; Total fan-out                               ; 26              ;
+; Average fan-out                             ; 1.44            ;
 +---------------------------------------------+-----------------+
 
 
@@ -234,15 +233,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------+
-; Port Connectivity Checks: "DFlipFlop:ff3" ;
-+------+-------+----------+-----------------+
-; Port ; Type  ; Severity ; Details         ;
-+------+-------+----------+-----------------+
-; d    ; Input ; Info     ; Stuck at VCC    ;
-+------+-------+----------+-----------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -252,13 +242,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     plain             ; 3                           ;
 ; arriav_lcell_comb     ; 3                           ;
 ;     normal            ; 3                           ;
-;         1 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
 ;         4 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
 ; boundary_port         ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.78                        ;
+; Average LUT depth     ; 0.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -277,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Mar 20 21:24:25 2021
+    Info: Processing started: Sat Mar 20 23:01:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ThreebitUpDownCount -c ThreebitUpDownCount
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -290,18 +280,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file Testben
 Info (12021): Found 2 design units, including 1 entities, in source file DFlipFlop.vhd
     Info (12022): Found design unit 1: DFlipFlop-behave File: /home/sahasra/Documents/dld/6/q2/DFlipFlop.vhd Line: 8
     Info (12023): Found entity 1: DFlipFlop File: /home/sahasra/Documents/dld/6/q2/DFlipFlop.vhd Line: 4
-Info (12021): Found 6 design units, including 3 entities, in source file basic_gates.vhd
-    Info (12022): Found design unit 1: and_gate-and_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 33
-    Info (12022): Found design unit 2: or_gate-or_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 39
-    Info (12022): Found design unit 3: not_gate-not_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 45
+Info (12021): Found 14 design units, including 7 entities, in source file basic_gates.vhd
+    Info (12022): Found design unit 1: and_gate-and_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 66
+    Info (12022): Found design unit 2: and3_gate-and_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 72
+    Info (12022): Found design unit 3: and4_gate-and_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 78
+    Info (12022): Found design unit 4: or_gate-or_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 84
+    Info (12022): Found design unit 5: or5_gate-or_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 90
+    Info (12022): Found design unit 6: not_gate-not_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 96
+    Info (12022): Found design unit 7: xor_gate-xor_behaviour File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 102
     Info (12023): Found entity 1: and_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 6
-    Info (12023): Found entity 2: or_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 15
-    Info (12023): Found entity 3: not_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 24
+    Info (12023): Found entity 2: and3_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 15
+    Info (12023): Found entity 3: and4_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 24
+    Info (12023): Found entity 4: or_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 33
+    Info (12023): Found entity 5: or5_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 42
+    Info (12023): Found entity 6: not_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 51
+    Info (12023): Found entity 7: xor_gate File: /home/sahasra/Documents/dld/6/q2/basic_gates.vhd Line: 60
 Info (12127): Elaborating entity "ThreebitUpDownCount" for the top level hierarchy
-Info (12128): Elaborating entity "DFlipFlop" for hierarchy "DFlipFlop:ff3" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 44
-Info (12128): Elaborating entity "not_gate" for hierarchy "not_gate:notgate0" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 49
-Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:andgate0" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 55
-Info (12128): Elaborating entity "or_gate" for hierarchy "or_gate:orgate1" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 61
+Info (12128): Elaborating entity "not_gate" for hierarchy "not_gate:notgate4" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 62
+Info (12128): Elaborating entity "xor_gate" for hierarchy "xor_gate:xorgate0" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 68
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:andgate0" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 77
+Info (12128): Elaborating entity "or_gate" for hierarchy "or_gate:orgate1" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 83
+Info (12128): Elaborating entity "and3_gate" for hierarchy "and3_gate:andgate2" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 94
+Info (12128): Elaborating entity "and4_gate" for hierarchy "and4_gate:andgate5" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 101
+Info (12128): Elaborating entity "or5_gate" for hierarchy "or5_gate:orgate2" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 106
+Info (12128): Elaborating entity "DFlipFlop" for hierarchy "DFlipFlop:ff1" File: /home/sahasra/Documents/dld/6/q2/ThreebitUpDownCount.vhd Line: 111
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -310,9 +312,9 @@ Info (21057): Implemented 9 device resources after synthesis - the final resourc
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 491 megabytes
-    Info: Processing ended: Sat Mar 20 21:24:32 2021
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Sat Mar 20 23:01:26 2021
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 

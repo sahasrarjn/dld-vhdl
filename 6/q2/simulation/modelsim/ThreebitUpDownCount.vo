@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "03/20/2021 21:25:14"
+// DATE "03/20/2021 23:02:15"
 
 // 
 // Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -40,12 +40,12 @@ input 	up;
 output 	[2:0] count;
 
 // Design Ports Information
-// count[0]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// count[1]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// count[2]	=>  Location: PIN_L22,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// rst	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// count[0]	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// count[1]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// count[2]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rst	=>  Location: PIN_K17,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// up	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// up	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -72,7 +72,7 @@ wire \ff1|q~0_combout ;
 wire \ff1|q~q ;
 
 
-// Location: IOOBUF_X89_Y36_N5
+// Location: IOOBUF_X89_Y37_N22
 cyclonev_io_obuf \count[0]~output (
 	.i(\ff3|q~q ),
 	.oe(vcc),
@@ -88,7 +88,7 @@ defparam \count[0]~output .open_drain_output = "false";
 defparam \count[0]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X89_Y36_N39
+// Location: IOOBUF_X89_Y37_N56
 cyclonev_io_obuf \count[1]~output (
 	.i(\ff2|q~q ),
 	.oe(vcc),
@@ -104,7 +104,7 @@ defparam \count[1]~output .open_drain_output = "false";
 defparam \count[1]~output .shift_series_termination_control = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X89_Y36_N56
+// Location: IOOBUF_X89_Y38_N22
 cyclonev_io_obuf \count[2]~output (
 	.i(\ff1|q~q ),
 	.oe(vcc),
@@ -145,7 +145,7 @@ defparam \clk~inputCLKENA0 .ena_register_power_up = "high";
 defparam \clk~inputCLKENA0 .test_syn = "high";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y36_N21
+// Location: IOIBUF_X89_Y37_N4
 cyclonev_io_ibuf \rst~input (
 	.i(rst),
 	.ibar(gnd),
@@ -156,16 +156,16 @@ defparam \rst~input .bus_hold = "false";
 defparam \rst~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N48
+// Location: LABCELL_X88_Y37_N48
 cyclonev_lcell_comb \ff3|q~0 (
 // Equation(s):
-// \ff3|q~0_combout  = ( !\rst~input_o  )
+// \ff3|q~0_combout  = ( !\ff3|q~q  & ( !\rst~input_o  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
-	.datae(gnd),
+	.datae(!\ff3|q~q ),
 	.dataf(!\rst~input_o ),
 	.datag(gnd),
 	.cin(gnd),
@@ -176,11 +176,11 @@ cyclonev_lcell_comb \ff3|q~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ff3|q~0 .extended_lut = "off";
-defparam \ff3|q~0 .lut_mask = 64'hFFFFFFFF00000000;
+defparam \ff3|q~0 .lut_mask = 64'hFFFF000000000000;
 defparam \ff3|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N50
+// Location: FF_X88_Y37_N50
 dffeas \ff3|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff3|q~0_combout ),
@@ -199,7 +199,7 @@ defparam \ff3|q .is_wysiwyg = "true";
 defparam \ff3|q .power_up = "low";
 // synopsys translate_on
 
-// Location: IOIBUF_X89_Y38_N4
+// Location: IOIBUF_X89_Y37_N38
 cyclonev_io_ibuf \up~input (
 	.i(up),
 	.ibar(gnd),
@@ -210,16 +210,17 @@ defparam \up~input .bus_hold = "false";
 defparam \up~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N57
+// Location: LABCELL_X88_Y37_N54
 cyclonev_lcell_comb \ff2|q~0 (
 // Equation(s):
-// \ff2|q~0_combout  = ( \ff3|q~q  & ( (!\up~input_o  & !\rst~input_o ) ) ) # ( !\ff3|q~q  & ( (\up~input_o  & !\rst~input_o ) ) )
+// \ff2|q~0_combout  = ( \ff2|q~q  & ( \ff3|q~q  & ( (!\up~input_o  & !\rst~input_o ) ) ) ) # ( !\ff2|q~q  & ( \ff3|q~q  & ( (\up~input_o  & !\rst~input_o ) ) ) ) # ( \ff2|q~q  & ( !\ff3|q~q  & ( (\up~input_o  & !\rst~input_o ) ) ) ) # ( !\ff2|q~q  & ( 
+// !\ff3|q~q  & ( (!\up~input_o  & !\rst~input_o ) ) ) )
 
-	.dataa(!\up~input_o ),
-	.datab(!\rst~input_o ),
-	.datac(gnd),
+	.dataa(gnd),
+	.datab(!\up~input_o ),
+	.datac(!\rst~input_o ),
 	.datad(gnd),
-	.datae(gnd),
+	.datae(!\ff2|q~q ),
 	.dataf(!\ff3|q~q ),
 	.datag(gnd),
 	.cin(gnd),
@@ -230,11 +231,11 @@ cyclonev_lcell_comb \ff2|q~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ff2|q~0 .extended_lut = "off";
-defparam \ff2|q~0 .lut_mask = 64'h4444444488888888;
+defparam \ff2|q~0 .lut_mask = 64'hC0C030303030C0C0;
 defparam \ff2|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N59
+// Location: FF_X88_Y37_N56
 dffeas \ff2|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff2|q~0_combout ),
@@ -253,16 +254,17 @@ defparam \ff2|q .is_wysiwyg = "true";
 defparam \ff2|q .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X88_Y36_N54
+// Location: LABCELL_X88_Y37_N21
 cyclonev_lcell_comb \ff1|q~0 (
 // Equation(s):
-// \ff1|q~0_combout  = ( \ff2|q~q  & ( (!\up~input_o  & (!\rst~input_o  & \ff3|q~q )) ) ) # ( !\ff2|q~q  & ( (\up~input_o  & (!\rst~input_o  & !\ff3|q~q )) ) )
+// \ff1|q~0_combout  = ( \ff1|q~q  & ( \ff2|q~q  & ( (!\rst~input_o  & ((!\up~input_o ) # (!\ff3|q~q ))) ) ) ) # ( !\ff1|q~q  & ( \ff2|q~q  & ( (!\rst~input_o  & (\up~input_o  & \ff3|q~q )) ) ) ) # ( \ff1|q~q  & ( !\ff2|q~q  & ( (!\rst~input_o  & ((\ff3|q~q 
+// ) # (\up~input_o ))) ) ) ) # ( !\ff1|q~q  & ( !\ff2|q~q  & ( (!\rst~input_o  & (!\up~input_o  & !\ff3|q~q )) ) ) )
 
-	.dataa(!\up~input_o ),
-	.datab(!\rst~input_o ),
-	.datac(!\ff3|q~q ),
-	.datad(gnd),
-	.datae(gnd),
+	.dataa(!\rst~input_o ),
+	.datab(gnd),
+	.datac(!\up~input_o ),
+	.datad(!\ff3|q~q ),
+	.datae(!\ff1|q~q ),
 	.dataf(!\ff2|q~q ),
 	.datag(gnd),
 	.cin(gnd),
@@ -273,11 +275,11 @@ cyclonev_lcell_comb \ff1|q~0 (
 	.shareout());
 // synopsys translate_off
 defparam \ff1|q~0 .extended_lut = "off";
-defparam \ff1|q~0 .lut_mask = 64'h4040404008080808;
+defparam \ff1|q~0 .lut_mask = 64'hA0000AAA000AAAA0;
 defparam \ff1|q~0 .shared_arith = "off";
 // synopsys translate_on
 
-// Location: FF_X88_Y36_N55
+// Location: FF_X88_Y37_N22
 dffeas \ff1|q (
 	.clk(\clk~inputCLKENA0_outclk ),
 	.d(\ff1|q~0_combout ),
@@ -296,7 +298,7 @@ defparam \ff1|q .is_wysiwyg = "true";
 defparam \ff1|q .power_up = "low";
 // synopsys translate_on
 
-// Location: LABCELL_X30_Y77_N0
+// Location: LABCELL_X73_Y60_N0
 cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 

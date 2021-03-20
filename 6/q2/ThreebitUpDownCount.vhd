@@ -13,7 +13,7 @@ end entity;
 architecture structure of ThreebitUpDownCount is
 
 Signal Q,T,Qc:std_logic_vector(2 downto 0);
-Signal v0,v1,v2,v3,v5,v6,v7,v8:std_logic;
+Signal v0,v1,v2,v3,v4,v5,v6,v7,v8,v9:std_logic;
 Signal upc:std_logic;
 
 -- declare components of basic_gates and flipflop
@@ -83,14 +83,12 @@ port map(v2,upc,v4);
 orgate1 : or_gate
 port map(v4,v3,T(1));
 
-ff2 : DFlipFlop
-port map(clk,rst,T(1),S(1));
 
 
 -- From Kmap T2 = up'.S1.S0 + up.S1'.S0'
 notgate2 : not_gate
 port map(Q(1),Qc(1));
-notgate2 : not_gate
+notgate3 : not_gate
 port map(Q(2),Qc(2));
 
 andgate2 : and3_gate

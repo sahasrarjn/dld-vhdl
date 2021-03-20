@@ -58,7 +58,7 @@ use IEEE.std_logic_1164.all;
 
 -- XOR gate
 entity xor_gate is
-port(a : in std_logic;
+port(a , b: in std_logic;
 	  c:out std_logic);
 end entity;
 
@@ -69,13 +69,13 @@ begin
 end and_behaviour;
 
 -- architecture of 3-AND gate
-architecture and_behaviour of and_gate is
+architecture and_behaviour of and3_gate is
 begin
 	d <= (a and b) and c;
 end and_behaviour;
 
 -- architecture of 4-AND gate
-architecture and_behaviour of and_gate is
+architecture and_behaviour of and4_gate is
 begin
 	e <= (a and b) and (c and d);
 end and_behaviour;
@@ -87,7 +87,7 @@ begin
 end or_behaviour;
 
 -- architecture of 5-OR gate
-architecture or_behaviour of or_gate is
+architecture or_behaviour of or5_gate is
 begin
 	f <= ((a or b) or (c or d)) or e;
 end or_behaviour;
@@ -101,5 +101,5 @@ end not_behaviour;
 -- architure of XOR gate
 architecture xor_behaviour of xor_gate is
 begin
-	c <= xor a;
+	c <= b xor a;
 end xor_behaviour;

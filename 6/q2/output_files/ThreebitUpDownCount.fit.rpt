@@ -1,5 +1,5 @@
 Fitter report for ThreebitUpDownCount
-Sat Mar 20 21:25:01 2021
+Sat Mar 20 23:02:00 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sat Mar 20 21:25:01 2021       ;
+; Fitter Status                   ; Successful - Sat Mar 20 23:02:00 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ThreebitUpDownCount                         ;
 ; Top-level Entity Name           ; ThreebitUpDownCount                         ;
@@ -240,9 +240,9 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; Combinational ALUT usage for logic                          ; 4                  ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 0                  ;       ;
-;     -- 5 input functions                                    ; 0                  ;       ;
+;     -- 5 input functions                                    ; 1                  ;       ;
 ;     -- 4 input functions                                    ; 1                  ;       ;
-;     -- <=3 input functions                                  ; 3                  ;       ;
+;     -- <=3 input functions                                  ; 2                  ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 3                  ;       ;
@@ -287,10 +287,10 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 0.0% / 0.0% / 0.0% ;       ;
-; Maximum fan-out                                             ; 3                  ;       ;
-; Highest non-global fan-out                                  ; 3                  ;       ;
-; Total fan-out                                               ; 24                 ;       ;
-; Average fan-out                                             ; 1.20               ;       ;
+; Maximum fan-out                                             ; 4                  ;       ;
+; Highest non-global fan-out                                  ; 4                  ;       ;
+; Total fan-out                                               ; 27                 ;       ;
+; Average fan-out                                             ; 1.35               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -322,9 +322,9 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; Combinational ALUT usage for logic                          ; 4                    ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 0                    ; 0                              ;
-;     -- 5 input functions                                    ; 0                    ; 0                              ;
+;     -- 5 input functions                                    ; 1                    ; 0                              ;
 ;     -- 4 input functions                                    ; 1                    ; 0                              ;
-;     -- <=3 input functions                                  ; 3                    ; 0                              ;
+;     -- <=3 input functions                                  ; 2                    ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -353,8 +353,8 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 24                   ; 0                              ;
-;     -- Registered Connections                               ; 6                    ; 0                              ;
+;     -- Total Connections                                    ; 27                   ; 0                              ;
+;     -- Registered Connections                               ; 9                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -387,8 +387,8 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; clk  ; M16   ; 5B       ; 89           ; 35           ; 60           ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; rst  ; M18   ; 5B       ; 89           ; 36           ; 20           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; up   ; L19   ; 5B       ; 89           ; 38           ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; rst  ; K17   ; 5B       ; 89           ; 37           ; 3            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; up   ; M20   ; 5B       ; 89           ; 37           ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -397,9 +397,9 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; count[0] ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; count[1] ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; count[2] ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; count[0] ; L17   ; 5B       ; 89           ; 37           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; count[1] ; M21   ; 5B       ; 89           ; 37           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; count[2] ; L18   ; 5B       ; 89           ; 38           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -684,7 +684,7 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K16      ; 424        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K17      ; 284        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; K17      ; 284        ; 5B       ; rst                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 407        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K20      ; 405        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -706,12 +706,12 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; L14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; L17      ; 286        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; L18      ; 290        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; L19      ; 288        ; 5B       ; up                              ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L17      ; 286        ; 5B       ; count[0]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L18      ; 290        ; 5B       ; count[2]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L19      ; 288        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L20      ;            ; 5B       ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L22      ; 283        ; 5B       ; count[2]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L22      ; 283        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; M1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M3       ;            ; --       ; VCCH_GXBL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -729,11 +729,11 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; M15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; M16      ; 278        ; 5B       ; clk                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M17      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M18      ; 282        ; 5B       ; rst                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M18      ; 282        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M20      ; 285        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; M21      ; 287        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; M22      ; 281        ; 5B       ; count[1]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M20      ; 285        ; 5B       ; up                              ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M21      ; 287        ; 5B       ; count[1]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M22      ; 281        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N1       ; 28         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N2       ; 29         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -752,7 +752,7 @@ The pin-out file can be found in /home/sahasra/Documents/dld/6/q2/output_files/T
 ; N16      ; 276        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N18      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; N19      ; 280        ; 5B       ; count[0]                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N19      ; 280        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N20      ; 277        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N21      ; 279        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; N22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -939,8 +939,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name         ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+---------------------+--------------+
-; |ThreebitUpDownCount       ; 2.0 (0.5)            ; 2.0 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (1)               ; 3 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 6    ; 0            ; |ThreebitUpDownCount               ; ThreebitUpDownCount ; work         ;
-;    |DFlipFlop:ff1|         ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ThreebitUpDownCount|DFlipFlop:ff1 ; DFlipFlop           ; work         ;
+; |ThreebitUpDownCount       ; 2.0 (0.5)            ; 2.5 (0.5)                        ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (1)               ; 3 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 6    ; 0            ; |ThreebitUpDownCount               ; ThreebitUpDownCount ; work         ;
+;    |DFlipFlop:ff1|         ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ThreebitUpDownCount|DFlipFlop:ff1 ; DFlipFlop           ; work         ;
 ;    |DFlipFlop:ff2|         ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ThreebitUpDownCount|DFlipFlop:ff2 ; DFlipFlop           ; work         ;
 ;    |DFlipFlop:ff3|         ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ThreebitUpDownCount|DFlipFlop:ff3 ; DFlipFlop           ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+---------------------+--------------+
@@ -967,9 +967,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout      ; Pad To Core Index ; Setting ;
 +--------------------------+-------------------+---------+
 ; rst                      ;                   ;         ;
+;      - DFlipFlop:ff3|q~0 ; 1                 ; 0       ;
 ;      - DFlipFlop:ff2|q~0 ; 1                 ; 0       ;
 ;      - DFlipFlop:ff1|q~0 ; 1                 ; 0       ;
-;      - DFlipFlop:ff3|q~0 ; 1                 ; 0       ;
 ; clk                      ;                   ;         ;
 ; up                       ;                   ;         ;
 ;      - DFlipFlop:ff2|q~0 ; 1                 ; 0       ;
@@ -1000,10 +1000,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-----------------------+
 ; Routing Resource Type        ; Usage                 ;
 +------------------------------+-----------------------+
-; Block interconnects          ; 8 / 374,484 ( < 1 % ) ;
+; Block interconnects          ; 7 / 374,484 ( < 1 % ) ;
 ; C12 interconnects            ; 0 / 16,664 ( 0 % )    ;
-; C2 interconnects             ; 0 / 155,012 ( 0 % )   ;
-; C4 interconnects             ; 1 / 72,600 ( < 1 % )  ;
+; C2 interconnects             ; 1 / 155,012 ( < 1 % ) ;
+; C4 interconnects             ; 0 / 72,600 ( 0 % )    ;
 ; DQS bus muxes                ; 0 / 30 ( 0 % )        ;
 ; DQS-18 I/O buses             ; 0 / 30 ( 0 % )        ;
 ; DQS-9 I/O buses              ; 0 / 30 ( 0 % )        ;
@@ -1015,7 +1015,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; R14 interconnects            ; 0 / 15,868 ( 0 % )    ;
 ; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )    ;
 ; R3 interconnects             ; 2 / 169,296 ( < 1 % ) ;
-; R6 interconnects             ; 3 / 330,800 ( < 1 % ) ;
+; R6 interconnects             ; 1 / 330,800 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 480 ( < 1 % )     ;
 ; Wire stub REs                ; 0 / 20,834 ( 0 % )    ;
 +------------------------------+-----------------------+
@@ -1137,7 +1137,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk             ; clk                  ; 1.0               ;
+; clk             ; clk                  ; 1.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1148,8 +1148,8 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; DFlipFlop:ff3|q ; DFlipFlop:ff1|q      ; 0.365             ;
-; DFlipFlop:ff2|q ; DFlipFlop:ff1|q      ; 0.335             ;
+; DFlipFlop:ff3|q ; DFlipFlop:ff2|q      ; 0.382             ;
+; DFlipFlop:ff2|q ; DFlipFlop:ff1|q      ; 0.333             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
@@ -1178,10 +1178,10 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
@@ -1191,16 +1191,16 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1866 megabytes
-    Info: Processing ended: Sat Mar 20 21:25:01 2021
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:49
+    Info: Peak virtual memory: 1867 megabytes
+    Info: Processing ended: Sat Mar 20 23:02:01 2021
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:56
 
 
