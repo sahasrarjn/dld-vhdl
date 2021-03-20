@@ -10,7 +10,7 @@ entity ThreebitUpDownCount is
 	count : out std_logic_vector (2 downto 0));
 end entity;
 
-architecture structure of TwobitUpCount is
+architecture structure of ThreebitUpDownCount is
 
 Signal S,T:std_logic_vector(2 downto 0);
 Signal v0,v1,v2,v3,S0c,S1c:std_logic;
@@ -90,7 +90,7 @@ ff3 : DFlipFlop
 port map(clk,rst,T(0),S(0));
 
 --The output is simply the bits in S as defined by our states
-cound(2) <= S(2)
+count(2) <= S(2);
 count(1) <= S(1);
 count(0) <= S(0);
 
