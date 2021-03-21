@@ -85,7 +85,7 @@ port map(v4,v3,T(1));
 
 
 
--- From Kmap T2 = up'.S1.S0 + up.S1'.S0'
+-- From Kmap T2 = up'.Q2'.Q1'.Q0' + up.Q0.Q1.Q2' + up'.Q0.Q2 + up.Q2.Q1' + up.Q1.Q0'
 notgate2 : not_gate
 port map(Q(1),Qc(1));
 notgate3 : not_gate
