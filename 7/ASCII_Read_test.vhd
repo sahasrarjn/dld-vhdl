@@ -8,7 +8,8 @@ end entity;
 
 architecture reader of ASCII_Read_test is
 	component rl_encoder
-		port (a: in std_logic_vector (7 downto 0); clk:in std_logic;z: out std_logic_vector (7 downto 0) ; dvl:out std_logic);
+		port (a: in std_logic_vector (7 downto 0); clk:in std_logic;z: out std_logic_vector (7 downto 0) ; 
+		dvl:out std_logic);
 	end component;
 	signal input_sig, output_sig: std_logic_vector (7 downto 0);
 	signal clk : std_logic;
@@ -24,19 +25,36 @@ begin
 		variable input_var, output_var : std_logic_vector (7 downto 0);
 	
 	begin
+		clk<='1';
+		wait for 20 ns;
+		clk<='0';
+		wait for 20 ns;
 		while not endfile(input_file) loop
 			readline (input_file, input_line);
 			read (input_line, input_var);
 			input_sig <= input_var;
 			clk <= '1'; 
-			wait for 20 ns;
+			wait for 50 ns;
 			output_var := output_sig;
 			if(dvl = '1') then 
 				write (output_line, output_var);
 				writeline (output_file, output_line);
 			end if;
 			clk <= '0';
-			wait for 20 ns;
+			wait for 50 ns;
+		end loop;
+
+		while(output_sig /= "11111111") loop
+			input_sig <= "11111111";
+			clk <= '1';
+			wait for 50 ns;
+			output_var := output_sig;
+			if(dvl = '1' and output_sig /= "11111111") then
+				write(output_line,output_var);
+				writeline(output_file,output_line);
+			end if;
+			clk <= '0';
+			wait for 50 ns;
 		end loop;
 	
 	wait;
