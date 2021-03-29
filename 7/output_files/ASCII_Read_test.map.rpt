@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ASCII_Read_test
-Mon Mar 29 06:19:06 2021
+Mon Mar 29 15:38:08 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 29 06:19:06 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 29 15:38:08 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ASCII_Read_test                             ;
 ; Top-level Entity Name           ; rl_encoder                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 290                                         ;
+; Total registers                 ; 548                                         ;
 ; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -183,25 +183,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 627       ;
+; Estimate of Logic utilization (ALMs needed) ; 1621      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 691       ;
-;     -- 7 input functions                    ; 40        ;
-;     -- 6 input functions                    ; 521       ;
-;     -- 5 input functions                    ; 10        ;
-;     -- 4 input functions                    ; 105       ;
-;     -- <=3 input functions                  ; 15        ;
+; Combinational ALUT usage for logic          ; 1999      ;
+;     -- 7 input functions                    ; 64        ;
+;     -- 6 input functions                    ; 1177      ;
+;     -- 5 input functions                    ; 82        ;
+;     -- 4 input functions                    ; 141       ;
+;     -- <=3 input functions                  ; 535       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 290       ;
+; Dedicated logic registers                   ; 548       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 18        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 291       ;
-; Total fan-out                               ; 4799      ;
-; Average fan-out                             ; 4.72      ;
+; Maximum fan-out                             ; 549       ;
+; Total fan-out                               ; 11222     ;
+; Average fan-out                             ; 4.34      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |rl_encoder                ; 691 (691)           ; 290 (290)                 ; 0                 ; 0          ; 18   ; 0            ; |rl_encoder         ; rl_encoder  ; work         ;
+; |rl_encoder                ; 1999 (1999)         ; 548 (548)                 ; 0                 ; 0          ; 18   ; 0            ; |rl_encoder         ; rl_encoder  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -230,12 +230,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 290   ;
+; Total registers                              ; 548   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 279   ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -245,75 +245,140 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |rl_encoder|cnt3[2]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |rl_encoder|last[0]        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rl_encoder|cnt2[5]        ;
-; 66:1               ; 8 bits    ; 352 LEs       ; 344 LEs              ; 8 LEs                  ; Yes        ; |rl_encoder|z[0]~reg0      ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |rl_encoder|Add3           ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |rl_encoder|op_buff        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |rl_encoder|cnt3[1]        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |rl_encoder|last[1]        ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |rl_encoder|cnt2[1]        ;
+; 67:1               ; 8 bits    ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; Yes        ; |rl_encoder|z[1]~reg0      ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |rl_encoder|Add3           ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |rl_encoder|Mux0           ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |rl_encoder|op_buff        ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; No         ; |rl_encoder|op_buff        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -322,22 +387,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 290                         ;
-;     ENA               ; 279                         ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 691                         ;
-;     extend            ; 40                          ;
-;         7 data inputs ; 40                          ;
-;     normal            ; 651                         ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 105                         ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 521                         ;
+; arriav_ff             ; 548                         ;
+;     ENA               ; 23                          ;
+;     plain             ; 525                         ;
+; arriav_lcell_comb     ; 1999                        ;
+;     extend            ; 64                          ;
+;         7 data inputs ; 64                          ;
+;     normal            ; 1935                        ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 523                         ;
+;         4 data inputs ; 141                         ;
+;         5 data inputs ; 82                          ;
+;         6 data inputs ; 1177                        ;
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 5.62                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 6.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -346,7 +411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -356,7 +421,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 29 06:18:47 2021
+    Info: Processing started: Mon Mar 29 15:37:42 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASCII_Read_test -c ASCII_Read_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -371,14 +436,14 @@ Warning (10540): VHDL Signal Declaration warning at rl_encoder.vhd(16): used exp
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 975 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2026 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 957 logic cells
+    Info (21061): Implemented 2008 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Mon Mar 29 06:19:06 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Mon Mar 29 15:38:08 2021
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:38
 
 

@@ -12,7 +12,7 @@ end entity;
 
 architecture behave of rl_encoder is
 	signal cnt2: natural range 0 to 63:=0;
-   signal cnt3 :natural range 0 to 31:=0;
+   signal cnt3 :natural range 0 to 63:=0;
 	signal ESC : std_logic_vector(7 downto 0) := "00011011";
 	signal last :std_logic_vector(7 downto 0) := "00000000";
 	signal first :std_logic := '0';
@@ -23,7 +23,7 @@ begin
 	
 	type op_arr is array (0 to 63) of std_logic_vector(7 downto 0);
 	variable op_buff: op_arr;
-	variable cnt_out :natural range 0 to 31:=0;
+	variable cnt_out :natural range 0 to 63:=0;
 	
 	begin
 		if(rising_edge(clk)) then

@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Mar 29 06:20:46 2021
+Fitter Status : Successful - Mon Mar 29 15:40:41 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ASCII_Read_test
 Top-level Entity Name : rl_encoder
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 556 / 56,480 ( < 1 % )
-Total registers : 295
+Logic utilization (in ALMs) : 1,452 / 56,480 ( 3 % )
+Total registers : 554
 Total pins : 18 / 268 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
