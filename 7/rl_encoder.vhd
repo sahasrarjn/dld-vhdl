@@ -29,7 +29,11 @@ begin
 		if(rising_edge(clk)) then
 			if(last = "11111111") then
 				if(cnt3 < cnt2) then
-					dvl2 <= '1';
+					if(op_buff(cnt3) = "11111111") then 
+						dvl2 <= '0';
+					else
+						dvl2 <= '1';
+					end if;
 					z <= op_buff(cnt3); 
 					cnt3 <= cnt3 + 1;
 				else
