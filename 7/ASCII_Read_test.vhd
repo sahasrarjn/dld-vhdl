@@ -19,8 +19,8 @@ begin
 		port map (a => input_sig,clk => clk, z=> output_sig, dvl => dvl);
 	
 	process
-		file input_file: text open read_mode is "/home/sibasis/Desktop/Lab/in.txt";
-		file output_file: text open write_mode is "/home/sibasis/Desktop/Lab/op.txt";
+		file input_file: text open read_mode is "c:\iitb\dld-vhdl\7\in.txt";
+		file output_file: text open write_mode is "c:\iitb\dld-vhdl\7\out.txt";
 		variable input_line, output_line: line;
 		variable input_var, output_var : std_logic_vector (7 downto 0);
 	

@@ -16,6 +16,7 @@ architecture behave of rl_encoder is
 	signal ESC : std_logic_vector(7 downto 0) := "00011011";
 	signal last :std_logic_vector(7 downto 0) := "00000000";
 	signal first :std_logic := '0';
+	signal dvl2, dvl3: std_logic;
 
 begin
 	process(clk)
@@ -28,11 +29,11 @@ begin
 		if(rising_edge(clk)) then
 			if(last = "11111111") then
 				if(cnt3 < cnt2) then
-					dvl <= '1';
+					dvl2 <= '1';
 					z <= op_buff(cnt3); 
 					cnt3 <= cnt3 + 1;
 				else
-					dvl <= '0';
+					dvl2 <= '0';
 					z<="11111111";
 				end if;
 			else
@@ -79,21 +80,30 @@ begin
 					cnt_out := cnt_out + 1; 
 			
 					if(cnt3 < cnt2) then
-						dvl <= '1';
+						dvl2 <= '1';
 						z <= op_buff(cnt3); 
 						cnt3 <= cnt3 + 1;
 					else
-						dvl <= '0';
+						dvl2 <= '0';
 					end if;
 				else 
 					first <= '1';
-					dvl <= '0';
+					dvl2 <= '0';
 					last <= a;
 					cnt_out := cnt_out + 1;
 				end if;
 			end if;
 		end if;
 	end process;
+	
+	process(clk)
+	begin
+		if falling_edge(clk) then
+			dvl3 <= '0';
+		end if;
+	end process;
+	
+	dvl <= dvl2 when clk='1' else dvl3;
 end architecture;
 
 
