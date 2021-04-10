@@ -9,9 +9,9 @@ architecture tb of testbench is
 		port ( clk, rst : in std_logic;
 		green, yellow, red: out std_logic_vector(3 downto 0));
 	end component;
-	signal clk : std_logic;
-	signal rst : std_logic;
-	signal green,yellow,red : std_logic_vector(3 downto 0);
+	signal clk : std_logic; --clock signal
+	signal rst : std_logic; -- reset signal
+	signal green,yellow,red : std_logic_vector(3 downto 0); --traffic lights
 	
 begin
 	dut_instance:TrafficLightController
@@ -20,33 +20,28 @@ begin
 	process 
 	begin
 	
-	rst = '0';
-	for i in 0 to 180 loop
+	rst <= '0'; --run a simulation
+	for i in 0 to 100 loop
 		clk <='1';
-		wait for 2.5s;
+		wait for 2.5 sec;
 		clk <= '0';
-		wait for 2.5s;
+		wait for 2.5 sec;
 	end loop;
 	
-	for i in 0 to 60 loop
-		clk <='1';
-		wait for 2.5s;
-		clk <= '0';
-		wait for 2.5s;
-	end loop;
+	rst <= '1'; --reset
 	
-	rst = '1';
-	clk<='1';
-	wait for 2.5s;
+	clk <='1';
+	wait for 2.5 sec;
 	clk <= '0';
-	wait for 2.5s;
-	rst = '0';
+	wait for 2.5 sec;
 	
-	for i in 0 to 60 loop
+	rst <= '0';
+	
+	for i in 0 to 100 loop --continue simulation after reset
 		clk <='1';
-		wait for 2.5s;
+		wait for 2.5 sec;
 		clk <= '0';
-		wait for 2.5s;
+		wait for 2.5 sec;
 	end loop;
 	
 	wait;
